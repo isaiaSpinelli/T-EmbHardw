@@ -1,2 +1,13 @@
 VM/
 /partage
+*.bdf
+*.qpf
+*.qsf
+*/db
+*/incremental_db
+*/output_files
+*/QsysProject
+*/EclipseProjet
+*/led_controller_bsp
+*/.qsys_edit
+
