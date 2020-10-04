@@ -6,7 +6,6 @@
 -- used for     : T-EmbHardw lab
 --| Modifications |-----------------------------------------------------------
 -- Ver  Date       Auteur  Description
--- 1.0  26.04.2019  EMI    Adaptation du chablon pour les etudiants  
 ------------------------------------------------------------------------------
 
 library ieee;

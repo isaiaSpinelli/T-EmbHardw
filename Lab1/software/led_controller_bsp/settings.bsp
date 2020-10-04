@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 1, 2020 4:13:35 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1601561615720</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 4, 2020 4:22:43 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1601821363130</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/quartus/Desktop/T-embHard/Lab1/software/led_controller_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../QsysProject.sopcinfo</SopcDesignFile>
@@ -906,31 +906,31 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x02001000 - 0x0200101F</addressRange>
+                <addressRange>0x02001040 - 0x0200105F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ParallelPort_0</slaveDescriptor>
-                <addressRange>0x02001020 - 0x0200103F</addressRange>
+                <addressRange>0x02001060 - 0x0200107F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>altpll_0</slaveDescriptor>
-                <addressRange>0x02001040 - 0x0200104F</addressRange>
+                <addressRange>0x02001080 - 0x0200108F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x02001050 - 0x02001057</addressRange>
+                <addressRange>0x02001090 - 0x02001097</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x02001058 - 0x0200105F</addressRange>
+                <addressRange>0x02001098 - 0x0200109F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

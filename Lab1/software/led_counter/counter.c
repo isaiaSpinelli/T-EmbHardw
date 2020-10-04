@@ -23,16 +23,14 @@
 
 // OFFSET Parallel port
 #define DIR_OFFSET 0x00
-#define PORT_OFFSET 0x02
-#define SET_OFFSET 0x04
-#define CLR_OFFSET 0x06
+#define PORT_OFFSET 0x08
+#define SET_OFFSET 0x0c
+#define CLR_OFFSET 0x10
 
 // OFFSET Timer interval
 #define STATUS_OFFSET 0x00
-#define CONTROL_OFFSET 0x02
+#define CONTROL_OFFSET 0x04
 
-#define START 0x04
-#define IRQ_ENABLE 0x01
 
 int counter = 0;
 
@@ -41,35 +39,43 @@ void timer_interrupt (void* context, alt_u32 id) {
 	counter++;
 
 	// write counter value on the parallel port
-	IOWR_32DIRECT(PARALLELPORT_0_BASE, PORT_OFFSET, counter );
+	IOWR_32DIRECT(PARALLELPORT_0_BASE, 8, counter );
+
+	//printf("irq\n");
 
 	// acknowledge IRQ on the timer
-	IOWR_16DIRECT(TIMER_0_BASE,STATUS_OFFSET,0x1);
+	IOWR_16DIRECT(TIMER_0_BASE, STATUS_OFFSET ,0x00);
 
 }
 
 int main(){
 
-	alt_irq_register(TIMER_0_IRQ,(void*)2,(alt_isr_func)timer_interrupt);
-
-	// Read controle state
-	short control = IORD_32DIRECT(TIMER_0_BASE,CONTROL_OFFSET);
-
-	// Start timer
-	IOWR_16DIRECT(TIMER_0_BASE, CONTROL_OFFSET, control | START );
-
-	// Enable IRQs
-	IOWR_16DIRECT(TIMER_0_BASE,CONTROL_OFFSET, control | IRQ_ENABLE );
-
-	// Direction en output
-	IOWR_32DIRECT(PARALLELPORT_0_BASE, DIR_OFFSET, 0xFFFFFFFF );
-
 	printf("Let s start counting\n");
+
+	IOWR_32DIRECT(PARALLELPORT_0_BASE, DIR_OFFSET ,0xFFFFFFFF);
+	//IOWR_32DIRECT(PARALLELPORT_0_BASE,4,0xaaaaaaaa);
+
+
+	// port
+	IOWR_32DIRECT(PARALLELPORT_0_BASE, PORT_OFFSET ,0xaaaaaaaa);
+	IOWR_32DIRECT(PARALLELPORT_0_BASE, PORT_OFFSET ,0xaaaaaa00);
+
+	// set
+	IOWR_32DIRECT(PARALLELPORT_0_BASE, SET_OFFSET ,0x55555555);
+
+	// clr
+	IOWR_32DIRECT(PARALLELPORT_0_BASE, CLR_OFFSET ,0x55555555);
+
+	// link irq to handler
+	alt_irq_register(TIMER_0_IRQ,(void*)2,(alt_isr_func)timer_interrupt);
+	// start timer and active irq
+	IOWR_16DIRECT(TIMER_0_BASE, CONTROL_OFFSET ,0x7);
+
 
 	while(1)
 	{
+		printf("counter timer = %d \n", counter);
 
-		printf("counter = %d \n", counter);
 
 	}
 }
