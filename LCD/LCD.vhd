@@ -42,7 +42,7 @@ ARCHITECTURE comp OF ParallelPort IS
 
 	signal reset_LCD_s 			: std_logic; -- LCD_RESETn
 	signal mode_LCD_s 			: std_logic; -- IM0
-	signal cs_n_LCD_s 			: std_logic; -- LCD_CSn 
+	signal cs_LCD_s 			: std_logic; -- LCD_CSn 
 	
 	-- Data or Cmd ?
 	signal DCn_s	 			: std_logic; -- LCD_D_Cn 
@@ -54,18 +54,14 @@ ARCHITECTURE comp OF ParallelPort IS
   
   LCD_RESETn <= not reset_LCD_s;
   IM0 <= mode_LCD_s;
-  LCD_CSn <= cs_n_LCD_s;
-  LCD_D_Cn <= DCn_s;
+  LCD_CSn <= cs_LCD_s;
+  DCn_s <= LCD_D_Cn;
 
 pRegWr:
 	process(Clk, nReset)
 	begin
 		if nReset = '0' then
-			reset_LCD_s <= '1'; -- Input by default
-			cs_n_LCD_s <= '1';
-			LCD_D_Cn <= '0';
-			mode_LCD_s <= '0';
-			dataSend_s <= (others => '0');
+			iRegDir <= (others => '0'); -- Input by default
 
 		elsif rising_edge(Clk) then
 			if ChipSelect = '1' and Write = '1' then -- Write cycle
@@ -74,7 +70,7 @@ pRegWr:
 					-- CONTROLE REGISTRE
 					when "00" => 
 						reset_LCD_s <= WriteData(0);
-						cs_n_LCD_s 	<= WriteData(1);
+						cs_LCD_s 	<= WriteData(1);
 						LCD_D_Cn 	<= WriteData(2);
 					
 					-- SEND COMMAND
@@ -101,14 +97,13 @@ pRegRd:
 	begin
 		if rising_edge(Clk) then
 			ReadData <= (others => '0'); -- default value
-
 			if ChipSelect = '1' and Read = '1' then -- Read cycle
 				case Address(1 downto 0) is
 					when "00" => 
 					
 						ReadData(0) <= reset_LCD_s;
 						ReadData(1) <= mode_LCD_s;
-						ReadData(2) <= cs_n_LCD_s;
+						ReadData(2) <= cs_LCD_s;
 					
 					when "01" => 
 					when "10" =>
