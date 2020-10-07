@@ -1,8 +1,12 @@
 VM/
 /partage
+*.elf
 *.bdf
 *.qpf
+*.o
+*.d
 *.qsf
+*.objdump
 */db
 */incremental_db
 */output_files

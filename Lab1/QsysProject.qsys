@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element CPU
@@ -25,19 +25,19 @@
          type = "String";
       }
    }
-   element LEDs
+   element ParallelPort_0
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "7";
          type = "int";
       }
    }
-   element LEDs.s1
+   element ParallelPort_0.avalon_slave_0
    {
       datum baseAddress
       {
-         value = "33558544";
+         value = "33558624";
          type = "String";
       }
    }
@@ -69,7 +69,7 @@
    {
       datum baseAddress
       {
-         value = "33558528";
+         value = "33558656";
          type = "String";
       }
    }
@@ -85,7 +85,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "4";
          type = "int";
       }
    }
@@ -93,7 +93,7 @@
    {
       datum baseAddress
       {
-         value = "33558568";
+         value = "33558680";
          type = "String";
       }
    }
@@ -101,7 +101,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -109,7 +109,23 @@
    {
       datum baseAddress
       {
-         value = "33558560";
+         value = "33558672";
+         type = "String";
+      }
+   }
+   element timer_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element timer_0.s1
+   {
+      datum baseAddress
+      {
+         value = "33558592";
          type = "String";
       }
    }
@@ -127,7 +143,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="Lab01.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -136,8 +152,8 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="leds_external_connection"
-   internal="LEDs.external_connection"
+   name="parallelport_0_conduit_end"
+   internal="ParallelPort_0.conduit_end"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
@@ -167,7 +183,7 @@
   <parameter name="dataAddrWidth" value="26" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM_controller.s1' start='0x1000000' end='0x2000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='CPU.debug_mem_slave' start='0x2000800' end='0x2001000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='altpll_0.pll_slave' start='0x2001000' end='0x2001010' type='altpll.pll_slave' /><slave name='LEDs.s1' start='0x2001010' end='0x2001020' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x2001020' end='0x2001028' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x2001028' end='0x2001030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM_controller.s1' start='0x1000000' end='0x2000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='CPU.debug_mem_slave' start='0x2000800' end='0x2001000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x2001040' end='0x2001060' type='altera_avalon_timer.s1' /><slave name='ParallelPort_0.avalon_slave_0' start='0x2001060' end='0x2001080' type='ParallelPort.avalon_slave_0' /><slave name='altpll_0.pll_slave' start='0x2001080' end='0x2001090' type='altpll.pll_slave' /><slave name='sysid_qsys_0.control_slave' start='0x2001090' end='0x2001098' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x2001098' end='0x20010A0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -206,14 +222,14 @@
   <parameter name="icache_tagramBlockType" value="Automatic" />
   <parameter name="impl" value="Fast" />
   <parameter name="instAddrWidth" value="26" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM_controller.s1' start='0x1000000' end='0x2000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='CPU.debug_mem_slave' start='0x2000800' end='0x2001000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM_controller.s1' start='0x1000000' end='0x2000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='CPU.debug_mem_slave' start='0x2000800' end='0x2001000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x2001040' end='0x2001060' type='altera_avalon_timer.s1' /><slave name='ParallelPort_0.avalon_slave_0' start='0x2001060' end='0x2001080' type='ParallelPort.avalon_slave_0' /></address-map>]]></parameter>
   <parameter name="instructionMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="instructionMasterHighPerformanceMapParam" value="" />
   <parameter name="instruction_master_high_performance_paddr_base" value="0" />
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="1" />
+  <parameter name="internalIrqMaskSystemInfo" value="3" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -325,20 +341,7 @@
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
  </module>
- <module name="LEDs" kind="altera_avalon_pio" version="18.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
- </module>
+ <module name="ParallelPort_0" kind="ParallelPort" version="1.0" enabled="1" />
  <module
    name="SDRAM_controller"
    kind="altera_avalon_new_sdram_controller"
@@ -567,13 +570,34 @@
    enabled="1">
   <parameter name="id" value="0" />
  </module>
+ <module name="timer_0" kind="altera_avalon_timer" version="18.1" enabled="1">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="fixedPeriod" value="true" />
+  <parameter name="period" value="10" />
+  <parameter name="periodUnits" value="MSEC" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="watchdogPulse" value="2" />
+ </module>
  <connection
    kind="avalon"
    version="18.1"
    start="CPU.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001028" />
+  <parameter name="baseAddress" value="0x02001098" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPU.data_master"
+   end="ParallelPort_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02001060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -582,7 +606,7 @@
    start="CPU.data_master"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001020" />
+  <parameter name="baseAddress" value="0x02001090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -600,7 +624,7 @@
    start="CPU.data_master"
    end="altpll_0.pll_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001000" />
+  <parameter name="baseAddress" value="0x02001080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -612,9 +636,18 @@
   <parameter name="baseAddress" value="0x01000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="avalon" version="18.1" start="CPU.data_master" end="LEDs.s1">
+ <connection kind="avalon" version="18.1" start="CPU.data_master" end="timer_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001010" />
+  <parameter name="baseAddress" value="0x02001040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="CPU.instruction_master"
+   end="ParallelPort_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02001060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -636,11 +669,19 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
+   kind="avalon"
+   version="18.1"
+   start="CPU.instruction_master"
+   end="timer_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02001040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
    kind="clock"
    version="18.1"
    start="altpll_0.c0"
    end="SDRAM_controller.clk" />
- <connection kind="clock" version="18.1" start="altpll_0.c0" end="LEDs.clk" />
  <connection kind="clock" version="18.1" start="altpll_0.c0" end="CPU.clk" />
  <connection kind="clock" version="18.1" start="altpll_0.c0" end="jtag_uart.clk" />
  <connection
@@ -648,6 +689,12 @@
    version="18.1"
    start="altpll_0.c0"
    end="sysid_qsys_0.clk" />
+ <connection kind="clock" version="18.1" start="altpll_0.c0" end="timer_0.clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="altpll_0.c0"
+   end="ParallelPort_0.clock" />
  <connection
    kind="clock"
    version="18.1"
@@ -655,6 +702,9 @@
    end="altpll_0.inclk_interface" />
  <connection kind="interrupt" version="18.1" start="CPU.irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection kind="interrupt" version="18.1" start="CPU.irq" end="timer_0.irq">
+  <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="reset"
@@ -667,7 +717,6 @@
    version="18.1"
    start="clk_0.clk_reset"
    end="SDRAM_controller.reset" />
- <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="LEDs.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -681,6 +730,16 @@
  <connection
    kind="reset"
    version="18.1"
+   start="clk_0.clk_reset"
+   end="timer_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ParallelPort_0.reset_sink" />
+ <connection
+   kind="reset"
+   version="18.1"
    start="CPU.debug_reset_request"
    end="altpll_0.inclk_interface_reset" />
  <connection
@@ -688,11 +747,6 @@
    version="18.1"
    start="CPU.debug_reset_request"
    end="SDRAM_controller.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="CPU.debug_reset_request"
-   end="LEDs.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -708,6 +762,16 @@
    version="18.1"
    start="CPU.debug_reset_request"
    end="CPU.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="CPU.debug_reset_request"
+   end="timer_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="CPU.debug_reset_request"
+   end="ParallelPort_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
