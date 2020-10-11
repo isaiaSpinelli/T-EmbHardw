@@ -78,7 +78,7 @@ pRegWr:
 
 		elsif rising_edge(Clk) then
 		
-			
+			start_send_s <= '0';
 		
 			if ChipSelect = '1' and Write = '1' then -- Write cycle
 				case Address(1 downto 0) is
@@ -172,6 +172,7 @@ Combinatoire_machine :
 				
 			when write2 =>
 				LCD_WRn <= '0';
+				Waitrequest <= '1';
 				Etat_Futur <= write3;
 				
 			when write3 =>
@@ -186,6 +187,7 @@ Combinatoire_machine :
 			when others =>
 				Etat_Futur <= idle;
 				LCD_WRn <= '1';
+			end case ;
 	
 	
 	end process Combinatoire_machine;
