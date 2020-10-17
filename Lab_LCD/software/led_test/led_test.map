@@ -1,0 +1,1081 @@
+Archive member included to satisfy reference by file (symbol)
+
+../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+                              obj/default/hello_world.o (alt_irq_register)
+../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_active)
+../led_test_bsp//libhal_bsp.a(alt_load.o)
+                              ../led_test_bsp//obj/HAL/src/crt0.o (alt_load)
+../led_test_bsp//libhal_bsp.a(alt_main.o)
+                              ../led_test_bsp//obj/HAL/src/crt0.o (alt_main)
+../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (alt_irq_init)
+../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_init)
+../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_ioctl)
+../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o) (alt_alarm_start)
+../led_test_bsp//libhal_bsp.a(alt_close.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (close)
+../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../led_test_bsp//libhal_bsp.a(alt_dev.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (_do_ctors)
+../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (_do_dtors)
+../led_test_bsp//libhal_bsp.a(alt_errno.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_close.o) (alt_errno)
+../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../led_test_bsp//libhal_bsp.a(alt_iic.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o) (alt_ic_isr_register)
+../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (alt_io_redirect)
+../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_entry)
+../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq)
+../led_test_bsp//libhal_bsp.a(alt_open.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o) (open)
+../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_close.o) (alt_release_fd)
+../led_test_bsp//libhal_bsp.a(alt_tick.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o) (_alt_tick_rate)
+../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_open.o) (alt_find_dev)
+../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_open.o) (alt_find_file)
+../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_open.o) (alt_get_fd)
+../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o) (alt_icache_flush)
+../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (atexit)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_main.o) (exit)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                              /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_close.o) (errno)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_find_dev.o) (memcmp)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                              ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o) (memcpy)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                              ../led_test_bsp//libhal_bsp.a(alt_find_dev.o) (strlen)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                              /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o) (__register_exitproc)
+/opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                              /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o) (__call_exitprocs)
+../led_test_bsp//libhal_bsp.a(alt_exit.o)
+                              /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+errno               0x4               /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000001000000 0x0000000000000020
+SDRAM_controller 0x0000000001000020 0x0000000000ffffe0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../led_test_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/hello_world.o
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libstdc++.a
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a
+START GROUP
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a
+LOAD ../led_test_bsp//libhal_bsp.a
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+END GROUP
+LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/libgcc.a
+                0x0000000001000000                __alt_mem_SDRAM_controller = 0x1000000
+
+.entry          0x0000000001000000       0x20
+ *(.entry)
+ .entry         0x0000000001000000       0x20 ../led_test_bsp//obj/HAL/src/crt0.o
+                0x0000000001000000                __reset
+
+.exceptions     0x0000000001000020      0x224
+                0x0000000001000020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x0000000001000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000001000020        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000001000020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000001000020        0x0 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000001000020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000001000020       0x54 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000001000074       0x10 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000001000084        0x4 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000001000088        0x4 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000100008c        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000100008c        0x8 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000001000094       0x14 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000010000a8        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000010000a8        0x0 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000010000a8       0x54 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000010000fc       0xd4 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x00000000010000fc                alt_irq_handler
+ .exceptions    0x00000000010001d0       0x74 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000010001d0                alt_instruction_exception_entry
+                0x0000000001000244                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x0000000001000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x0000000001000244     0x2ddc
+                [!provide]                        PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000001000244       0x4c ../led_test_bsp//obj/HAL/src/crt0.o
+                0x0000000001000244                _start
+ .text          0x0000000001000290      0x8c0 obj/default/hello_world.o
+                0x0000000001000290                timer_interrupt
+                0x00000000010002d4                main
+                0x0000000001000794                full_lcd_rgb
+                0x0000000001000808                full_lcd_color
+                0x0000000001000890                init_LCD
+                0x0000000001000ae8                LCD_Write_Command
+                0x0000000001000b1c                LCD_Write_Data
+ .text          0x0000000001000b50      0x180 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+                0x0000000001000b50                alt_irq_register
+ .text          0x0000000001000cd0        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000001000cd0       0xec ../led_test_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000001000d38                alt_load
+ .text          0x0000000001000dbc       0x7c ../led_test_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000001000dbc                alt_main
+ .text          0x0000000001000e38       0xd0 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000001000e6c                alt_irq_init
+                0x0000000001000ea4                alt_sys_init
+ .text          0x0000000001000f08      0x164 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x0000000001000f08                altera_avalon_jtag_uart_read_fd
+                0x0000000001000f68                altera_avalon_jtag_uart_write_fd
+                0x0000000001000fc8                altera_avalon_jtag_uart_close_fd
+                0x0000000001001018                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x000000000100106c      0x3d4 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x000000000100106c                altera_avalon_jtag_uart_init
+                0x00000000010013d8                altera_avalon_jtag_uart_close
+ .text          0x0000000001001440       0xf0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x0000000001001440                altera_avalon_jtag_uart_ioctl
+ .text          0x0000000001001530      0x21c ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x0000000001001530                altera_avalon_jtag_uart_read
+ .text          0x000000000100174c      0x224 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x000000000100174c                altera_avalon_jtag_uart_write
+ .text          0x0000000001001970       0xf4 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x00000000010019e8                alt_avalon_timer_sc_init
+ .text          0x0000000001001a64      0x12c ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+                0x0000000001001a64                alt_alarm_start
+ .text          0x0000000001001b90      0x10c ../led_test_bsp//libhal_bsp.a(alt_close.o)
+                0x0000000001001bcc                close
+ .text          0x0000000001001c9c       0x48 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000001001c9c                alt_dcache_flush_all
+ .text          0x0000000001001ce4       0x2c ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .text          0x0000000001001d10       0xe0 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0000000001001d4c                alt_dev_llist_insert
+ .text          0x0000000001001df0       0x60 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+                0x0000000001001df0                _do_ctors
+ .text          0x0000000001001e50       0x60 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+                0x0000000001001e50                _do_dtors
+ .text          0x0000000001001eb0        0x0 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .text          0x0000000001001eb0       0x34 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000001001eb0                alt_icache_flush_all
+ .text          0x0000000001001ee4      0x1b0 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+                0x0000000001001ee4                alt_ic_isr_register
+                0x0000000001001f34                alt_ic_irq_enable
+                0x0000000001001fbc                alt_ic_irq_disable
+                0x0000000001002048                alt_ic_irq_enabled
+ .text          0x0000000001002094       0xf0 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x0000000001002094                alt_iic_isr_register
+ .text          0x0000000001002184      0x140 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+                0x0000000001002248                alt_io_redirect
+ .text          0x00000000010022c4        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x00000000010022c4        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x00000000010022c4      0x254 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+                0x00000000010023c4                open
+ .text          0x0000000001002518       0x64 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+                0x0000000001002518                alt_release_fd
+ .text          0x000000000100257c      0x1a4 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+                0x000000000100257c                alt_alarm_stop
+                0x0000000001002618                alt_tick
+ .text          0x0000000001002720       0x24 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000001002720                altera_nios2_gen2_irq_init
+ .text          0x0000000001002744        0x0 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000001002744       0x90 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+                0x0000000001002744                alt_find_dev
+ .text          0x00000000010027d4      0x108 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+                0x00000000010027d4                alt_find_file
+ .text          0x00000000010028dc       0xa4 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+                0x00000000010028dc                alt_get_fd
+ .text          0x0000000001002980       0x90 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+                0x0000000001002980                alt_icache_flush
+ .text          0x0000000001002a10       0x9c ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000001002a10                alt_exception_cause_generated_bad_addr
+ .text          0x0000000001002aac        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .text.atexit   0x0000000001002aac       0x14 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                0x0000000001002aac                atexit
+ .text          0x0000000001002ac0        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .text.exit     0x0000000001002ac0       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                0x0000000001002ac0                exit
+ .text          0x0000000001002af8        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x0000000001002af8        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .text          0x0000000001002af8        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x0000000001002af8       0x7c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                0x0000000001002af8                memcmp
+ .text          0x0000000001002b74        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .text.memcpy   0x0000000001002b74      0x148 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                0x0000000001002b74                memcpy
+ .text          0x0000000001002cbc        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .text.strlen   0x0000000001002cbc       0x98 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                0x0000000001002cbc                strlen
+ .text          0x0000000001002d54        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x0000000001002d54      0x118 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                0x0000000001002d54                __register_exitproc
+ .text          0x0000000001002e6c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x0000000001002e6c      0x180 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0000000001002e6c                __call_exitprocs
+ .text          0x0000000001002fec       0x34 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+                0x0000000001002fec                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x0000000001003020                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                0x0000000001003020                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x0000000001003020                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x0000000001003020                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x0000000001003020                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x0000000001003020                . = ALIGN (0x4)
+
+.rodata         0x0000000001003020    0x4b034
+                0x0000000001003020                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000001003020                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000001003020    0x4b001 obj/default/hello_world.o
+ *fill*         0x000000000104e021        0x3 
+ .rodata        0x000000000104e024        0xf ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ *fill*         0x000000000104e033        0x1 
+ .rodata        0x000000000104e034        0xf ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x000000000104e043        0x1 
+ .rodata        0x000000000104e044        0xa ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ *fill*         0x000000000104e04e        0x2 
+ .rodata.str1.4
+                0x000000000104e050        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                                          0x2 (size before relaxing)
+ *(.rodata1)
+                0x000000000104e054                . = ALIGN (0x4)
+                0x000000000104e054                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000001003020                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x000000000104e054     0x1b64 load address 0x000000000104fbb8
+                0x000000000104e054                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000000000104e054                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000104e054        0x0 ../led_test_bsp//obj/HAL/src/crt0.o
+ .data          0x000000000104e054      0x500 obj/default/hello_world.o
+ .data          0x000000000104e554        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .data          0x000000000104e554        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x000000000104e554        0x0 ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x000000000104e554        0x0 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x000000000104e554     0x1060 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .data          0x000000000104f5b4        0x0 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000000000104f5b4      0x1a8 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+                0x000000000104f5b4                alt_dev_null
+                0x000000000104f5dc                alt_fd_list
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .data          0x000000000104f75c        0x0 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x000000000104f75c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .data          0x000000000104f75c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .data          0x000000000104f75c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data.impure_data
+                0x000000000104f75c      0x424 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data          0x000000000104fb80        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .data          0x000000000104fb80        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .data          0x000000000104fb80        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x000000000104fb80        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .data          0x000000000104fb80        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .data          0x000000000104fb80        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x000000000104fb80        0x0 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+                0x0000000001057b80                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000104fb80        0xc obj/default/hello_world.o
+ .sdata         0x000000000104fb8c        0x4 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x000000000104fb8c                alt_priority_mask
+ .sdata         0x000000000104fb90       0x14 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+                0x000000000104fb90                alt_fs_list
+                0x000000000104fb98                alt_dev_list
+                0x000000000104fba0                alt_max_fd
+ .sdata         0x000000000104fba4        0x4 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+                0x000000000104fba4                alt_errno
+ .sdata         0x000000000104fba8        0x8 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+                0x000000000104fba8                alt_alarm_list
+ .sdata._global_impure_ptr
+                0x000000000104fbb0        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000104fbb0                _global_impure_ptr
+ .sdata._impure_ptr
+                0x000000000104fbb4        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000104fbb4                _impure_ptr
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000000000104fbb8                . = ALIGN (0x4)
+                0x000000000104fbb8                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata, ABSOLUTE (.))
+                0x000000000104fbb8                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x000000000104fbb8                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x000000000105171c      0x124
+                0x000000000105171c                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x000000000105171c        0x4 obj/default/hello_world.o
+                0x000000000105171c                counter
+ .sbss          0x0000000001051720        0x4 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000001051720                alt_irq_active
+ .sbss          0x0000000001051724        0xc ../led_test_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000001051724                alt_argc
+                0x0000000001051728                alt_argv
+                0x000000000105172c                alt_envp
+ .sbss          0x0000000001051730        0x8 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+                0x0000000001051730                _alt_tick_rate
+                0x0000000001051734                _alt_nticks
+ .sbss          0x0000000001051738        0x4 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000001051738                alt_instruction_exception_handler
+ .sbss          0x000000000105173c        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                0x000000000105173c                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000001051740        0x0 obj/default/hello_world.o
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000001051740        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000001051740        0x0 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+ COMMON         0x0000000001051740      0x100 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000001051740                alt_irq
+                0x0000000001051840                . = ALIGN (0x4)
+                0x0000000001051840                __bss_end = ABSOLUTE (.)
+
+.SDRAM_controller
+                0x0000000001051840        0x0
+                [!provide]                        PROVIDE (_alt_partition_SDRAM_controller_start, ABSOLUTE (.))
+ *(.SDRAM_controller .SDRAM_controller. SDRAM_controller.*)
+                0x0000000001051840                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_SDRAM_controller_end, ABSOLUTE (.))
+                0x0000000001051840                _end = ABSOLUTE (.)
+                0x0000000001051840                end = ABSOLUTE (.)
+                0x0000000001051840                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_SDRAM_controller_load_addr, LOADADDR (.SDRAM_controller))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x23
+ *(.comment)
+ .comment       0x0000000000000000       0x23 obj/default/hello_world.o
+                                         0x24 (size before relaxing)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .comment       0x0000000000000023       0x24 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000023       0x24 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x5f8
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../led_test_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/hello_world.o
+ .debug_aranges
+                0x0000000000000048       0x20 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_aranges
+                0x0000000000000068       0x18 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000080       0x20 ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000000000000a0       0x20 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000000000000c0       0x20 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x0000000000000100       0x20 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_aranges
+                0x0000000000000120       0x20 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_aranges
+                0x0000000000000140       0x20 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x0000000000000160       0x20 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x0000000000000180       0x20 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x0000000000000200       0x20 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x0000000000000220       0x20 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x0000000000000240       0x20 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x0000000000000260       0x20 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x0000000000000280       0x18 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x0000000000000298       0x20 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000000000002b8       0x20 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x00000000000002d8       0x20 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x00000000000002f8       0x20 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x0000000000000318       0x30 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x0000000000000348       0x20 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000368       0x20 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .debug_aranges
+                0x0000000000000388       0x20 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x00000000000003a8       0x20 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x00000000000003c8       0x20 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x00000000000003e8       0x38 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x0000000000000420       0x20 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x0000000000000440       0x20 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x0000000000000460       0x20 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x0000000000000480       0x20 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_aranges
+                0x00000000000004a0       0x28 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x00000000000004c8       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x00000000000004e8       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000508       0x18 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000520       0x18 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_aranges
+                0x0000000000000538       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x0000000000000558       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000578       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x0000000000000598       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x00000000000005b8       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x00000000000005d8       0x20 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x7cff
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x72 ../led_test_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000072      0x313 obj/default/hello_world.o
+ .debug_info    0x0000000000000385      0x324 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_info    0x00000000000006a9       0x88 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000000731      0x145 ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000876      0x131 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000000000009a7      0x4d9 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000000e80      0x52e ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x00000000000013ae      0x3a0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_info    0x000000000000174e      0x280 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_info    0x00000000000019ce      0x345 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x0000000000001d13      0x340 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000002053      0x226 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x0000000000002279      0x2cc ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_info    0x0000000000002545      0x321 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .debug_info    0x0000000000002866       0xa5 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000000000000290b      0x49c ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_info    0x0000000000002da7      0x1a9 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000002f50       0x83 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x0000000000002fd3       0x83 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x0000000000003056       0xa6 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_info    0x00000000000030fc       0x92 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x000000000000318e      0x350 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_info    0x00000000000034de      0x1ef ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00000000000036cd      0x4a5 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x0000000000003b72       0x7b ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000003bed      0x187 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000003d74      0x3bb ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .debug_info    0x000000000000412f      0x2b0 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x00000000000043df      0x299 ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_info    0x0000000000004678       0x92 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x000000000000470a       0x81 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x000000000000478b      0x2e9 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000000000004a74      0x2e6 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x0000000000004d5a      0x310 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x000000000000506a       0xdc ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_info    0x0000000000005146      0x1e7 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x000000000000532d       0xfe /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000542b      0x8e4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000005d0f      0x8a1 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_info    0x00000000000065b0       0x8a /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_info    0x000000000000663a      0x11a /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000006754      0x144 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000006898       0xe2 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_info    0x000000000000697a      0x934 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_info    0x00000000000072ae      0x965 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x0000000000007c13       0xec ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x2d06
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../led_test_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012      0x142 obj/default/hello_world.o
+ .debug_abbrev  0x0000000000000154      0x186 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_abbrev  0x00000000000002da       0x40 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x000000000000031a       0x9f ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000003b9       0xba ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000473      0x187 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000005fa      0x127 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x0000000000000721      0x19e ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_abbrev  0x00000000000008bf      0x111 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_abbrev  0x00000000000009d0      0x1aa ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x0000000000000b7a      0x1a8 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000000d22      0x155 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x0000000000000e77      0x162 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_abbrev  0x0000000000000fd9      0x11f ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x00000000000010f8       0x5a ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000001152       0xd9 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x000000000000122b      0x114 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x000000000000133f       0x79 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x00000000000013b8       0x79 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x0000000000001431       0x5a ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x000000000000148b       0x42 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000000000014cd      0x163 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x0000000000001630      0x169 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000001799      0x114 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x00000000000018ad       0x12 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00000000000018bf      0x122 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000000000019e1      0x148 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x0000000000001b29       0xde ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x0000000000001c07      0x15a ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x0000000000001d61       0x42 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000001da3       0x12 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000001db5       0xf0 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000001ea5       0xf0 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x0000000000001f95      0x10d ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x00000000000020a2       0x8c ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_abbrev  0x000000000000212e       0xdc ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x000000000000220a       0xaa /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x00000000000022b4      0x1e5 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000002499      0x18f /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000002628       0x37 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x000000000000265f       0x7f /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x00000000000026de       0xa3 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000002781       0x90 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000002811      0x21e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000002a2f      0x22e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000002c5d       0xa9 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x0000000000000000     0x2d20
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x72 ../led_test_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000072      0x190 obj/default/hello_world.o
+ .debug_line    0x0000000000000202      0x155 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_line    0x0000000000000357       0x50 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x00000000000003a7       0x8e ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000000435       0xa4 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000004d9      0x152 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000000000000062b      0x12f ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x000000000000075a      0x18b ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x00000000000008e5      0x131 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x0000000000000a16      0x171 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x0000000000000b87      0x170 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000000cf7       0xfd ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x0000000000000df4       0xf9 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_line    0x0000000000000eed      0x16c ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .debug_line    0x0000000000001059       0x61 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000000000010ba       0xff ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_line    0x00000000000011b9       0xcf ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000001288       0x59 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x00000000000012e1       0x59 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x000000000000133a       0x51 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_line    0x000000000000138b       0x50 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000000000013db       0xeb ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_line    0x00000000000014c6       0xdb ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00000000000015a1      0x13a ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x00000000000016db       0x6b ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000001746       0xaa ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000017f0      0x128 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .debug_line    0x0000000000001918       0xae ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x00000000000019c6       0xff ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_line    0x0000000000001ac5       0x51 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000001b16       0xb3 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000001bc9       0xb5 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x0000000000001c7e       0xd1 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x0000000000001d4f       0xd4 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x0000000000001e23       0x81 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_line    0x0000000000001ea4       0xba ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000001f5e       0xe4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000002042      0x1f9 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_line    0x000000000000223b      0x15d /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000002398       0x5c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_line    0x00000000000023f4      0x173 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000002567      0x189 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line    0x00000000000026f0      0x16c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_line    0x000000000000285c      0x21c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000002a78      0x237 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000002caf       0x71 ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x0000000000000000      0xc3c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x134 obj/default/hello_world.o
+ .debug_frame   0x0000000000000134       0x34 ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_frame   0x0000000000000168       0x5c ../led_test_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000001c4       0x2c ../led_test_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000001f0       0x88 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000278       0xb0 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x0000000000000328       0xa4 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_frame   0x00000000000003cc       0x34 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_frame   0x0000000000000400       0x38 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x0000000000000438       0x38 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x0000000000000470       0x60 ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x00000000000004d0       0x34 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_frame   0x0000000000000504       0x60 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+ .debug_frame   0x0000000000000564       0x34 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000598       0x34 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000000000005cc       0x60 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x000000000000062c       0x38 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x0000000000000664       0x38 ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x000000000000069c       0x38 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000006d4       0xa4 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000778       0x38 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x00000000000007b0       0x60 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x0000000000000810       0x38 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x0000000000000848       0x84 ../led_test_bsp//libhal_bsp.a(alt_open.o)
+ .debug_frame   0x00000000000008cc       0x34 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x0000000000000900       0x5c ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x000000000000095c       0x34 ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000990       0x38 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x00000000000009c8       0x38 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x0000000000000a00       0x34 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x0000000000000a34       0x34 ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_frame   0x0000000000000a68       0x5c ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x0000000000000ac4       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000ae4       0x28 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000b0c       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000b2c       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000000b64       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000b84       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000bbc       0x54 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000c10       0x2c ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x0000000000000000     0x1b74
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x1d0 obj/default/hello_world.o
+                                        0x221 (size before relaxing)
+ .debug_str     0x00000000000001d0       0xef ../led_test_bsp//libhal_bsp.a(alt_irq_register.o)
+                                        0x209 (size before relaxing)
+ .debug_str     0x00000000000002bf       0x17 ../led_test_bsp//libhal_bsp.a(alt_irq_vars.o)
+                                        0x13b (size before relaxing)
+ .debug_str     0x00000000000002d6       0xe9 ../led_test_bsp//libhal_bsp.a(alt_load.o)
+                                        0x213 (size before relaxing)
+ .debug_str     0x00000000000003bf       0x70 ../led_test_bsp//libhal_bsp.a(alt_main.o)
+                                        0x19e (size before relaxing)
+ .debug_str     0x000000000000042f      0x1d1 ../led_test_bsp//libhal_bsp.a(alt_sys_init.o)
+                                        0x38f (size before relaxing)
+ .debug_str     0x0000000000000600       0xb9 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                                        0x3a5 (size before relaxing)
+ .debug_str     0x00000000000006b9       0xd1 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                                        0x339 (size before relaxing)
+ .debug_str     0x000000000000078a       0x4a ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                                        0x294 (size before relaxing)
+ .debug_str     0x00000000000007d4       0x48 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                                        0x2e9 (size before relaxing)
+ .debug_str     0x000000000000081c       0x4a ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x2ea (size before relaxing)
+ .debug_str     0x0000000000000866       0x6d ../led_test_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+                                        0x24c (size before relaxing)
+ .debug_str     0x00000000000008d3       0x59 ../led_test_bsp//libhal_bsp.a(alt_alarm_start.o)
+                                        0x27f (size before relaxing)
+ .debug_str     0x000000000000092c       0x44 ../led_test_bsp//libhal_bsp.a(alt_close.o)
+                                        0x20c (size before relaxing)
+ .debug_str     0x0000000000000970       0x34 ../led_test_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x156 (size before relaxing)
+ .debug_str     0x00000000000009a4      0x120 ../led_test_bsp//libhal_bsp.a(alt_dev.o)
+                                        0x306 (size before relaxing)
+ .debug_str     0x0000000000000ac4       0x34 ../led_test_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                                        0x1cd (size before relaxing)
+ .debug_str     0x0000000000000af8       0x48 ../led_test_bsp//libhal_bsp.a(alt_do_ctors.o)
+                                         0xd1 (size before relaxing)
+ .debug_str     0x0000000000000b40       0x4c ../led_test_bsp//libhal_bsp.a(alt_do_dtors.o)
+                                         0xd0 (size before relaxing)
+ .debug_str     0x0000000000000b8c       0x14 ../led_test_bsp//libhal_bsp.a(alt_errno.o)
+                                        0x146 (size before relaxing)
+ .debug_str     0x0000000000000ba0       0x34 ../led_test_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x156 (size before relaxing)
+ .debug_str     0x0000000000000bd4       0x70 ../led_test_bsp//libhal_bsp.a(alt_iic.o)
+                                        0x23f (size before relaxing)
+ .debug_str     0x0000000000000c44       0x34 ../led_test_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                                        0x1e9 (size before relaxing)
+ .debug_str     0x0000000000000c78       0x56 ../led_test_bsp//libhal_bsp.a(alt_io_redirect.o)
+                                        0x317 (size before relaxing)
+ .debug_str     0x0000000000000cce       0x3a ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+                                        0x198 (size before relaxing)
+ .debug_str     0x0000000000000d08       0x2f ../led_test_bsp//libhal_bsp.a(alt_open.o)
+                                        0x24c (size before relaxing)
+ .debug_str     0x0000000000000d37       0x28 ../led_test_bsp//libhal_bsp.a(alt_release_fd.o)
+                                        0x1d4 (size before relaxing)
+ .debug_str     0x0000000000000d5f       0x4a ../led_test_bsp//libhal_bsp.a(alt_tick.o)
+                                        0x253 (size before relaxing)
+ .debug_str     0x0000000000000da9       0x3b ../led_test_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x15d (size before relaxing)
+ .debug_str     0x0000000000000de4       0x24 ../led_test_bsp//libhal_bsp.a(alt_find_dev.o)
+                                        0x1ed (size before relaxing)
+ .debug_str     0x0000000000000e08       0x26 ../led_test_bsp//libhal_bsp.a(alt_find_file.o)
+                                        0x1fb (size before relaxing)
+ .debug_str     0x0000000000000e2e       0x30 ../led_test_bsp//libhal_bsp.a(alt_get_fd.o)
+                                        0x21d (size before relaxing)
+ .debug_str     0x0000000000000e5e       0x2c ../led_test_bsp//libhal_bsp.a(alt_icache_flush.o)
+                                        0x15c (size before relaxing)
+ .debug_str     0x0000000000000e8a      0x48b ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                                        0x5a1 (size before relaxing)
+ .debug_str     0x0000000000001315      0x163 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                                        0x208 (size before relaxing)
+ .debug_str     0x0000000000001478      0x3ac /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                                        0x5a5 (size before relaxing)
+ .debug_str     0x0000000000001824       0xc9 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                                        0x59c (size before relaxing)
+ .debug_str     0x00000000000018ed       0x3c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                                        0x1c4 (size before relaxing)
+ .debug_str     0x0000000000001929       0xcd /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                                        0x1cb (size before relaxing)
+ .debug_str     0x00000000000019f6       0x68 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                                        0x1f2 (size before relaxing)
+ .debug_str     0x0000000000001a5e       0x4e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                                        0x1de (size before relaxing)
+ .debug_str     0x0000000000001aac       0x3c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                                        0x5dd (size before relaxing)
+ .debug_str     0x0000000000001ae8       0x62 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                                        0x5c9 (size before relaxing)
+ .debug_str     0x0000000000001b4a       0x2a ../led_test_bsp//libhal_bsp.a(alt_exit.o)
+                                        0x152 (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x770
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0x2c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_loc     0x000000000000002c       0x1e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_loc     0x000000000000004a      0x126 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_loc     0x0000000000000170      0x266 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_loc     0x00000000000003d6       0x47 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_loc     0x000000000000041d      0x185 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_loc     0x00000000000005a2      0x1ce /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x30
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x30 ../led_test_bsp//obj/HAL/src/crt0.o
+                0x0000000002000000                __alt_data_end = 0x2000000
+                0x0000000002000000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit, __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start, end)
+                [!provide]                        PROVIDE (__alt_heap_limit, 0x2000000)
+OUTPUT(led_test.elf elf32-littlenios2)
+
+.debug_ranges   0x0000000000000000      0x178
+ .debug_ranges  0x0000000000000000       0x20 ../led_test_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x30 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_ranges  0x0000000000000050       0x18 ../led_test_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_ranges  0x0000000000000068       0x28 ../led_test_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x0000000000000090       0x10 ../led_test_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x00000000000000a0       0x30 ../led_test_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000000000000d0       0x18 ../led_test_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_ranges  0x00000000000000e8       0x10 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_ranges  0x00000000000000f8       0x10 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_ranges  0x0000000000000108       0x10 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_ranges  0x0000000000000118       0x10 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_ranges  0x0000000000000128       0x10 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_ranges  0x0000000000000138       0x10 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_ranges  0x0000000000000148       0x30 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
