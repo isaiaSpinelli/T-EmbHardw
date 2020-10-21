@@ -15,6 +15,7 @@
 #include "sys/alt_irq_entry.h"
 #include "image_arc.h"
 
+// OFFSET LCD interface
 #define CONTROL_OFFSET 0x00
 #define COM_OFFSET 0x02
 #define DATA_OFFSET 0x04
@@ -27,6 +28,7 @@
 #define X_PIXEL_SIZE 320
 #define Y_PIXEL_SIZE 240
 
+
 void LCD_Write_Command(int command);
 void LCD_Write_Data(int data) ;
 void init_LCD();
@@ -36,21 +38,22 @@ void full_lcd_color(alt_16 color);
 // g (green) ) 6 bit > 0 - 63
 // b (blue) ) 5 bit > 0 - 31
 void full_lcd_rgb(int r, int g, int b);
+void LCD_write_Array(alt_16* arrayPixels);
 
+void imgToArray(alt_16* color_reverse, char  *dataImg );
+void reverseImgArraz(alt_16* color, alt_16* color_reverse);
+
+void startTimer(void);
+size_t stopTimer(void);
+
+// counter 10ms
 int counter = 0;
-int reset = 0;
+
 
 void timer_interrupt (void* context, alt_u32 id) {
 
-	if(reset == 0)
-	{
-		// increase the counter
-		counter++;
-	} else
-	{
-		counter = 0;
-		reset = 0;
-	}
+	// increase the counter
+	counter++;
 
 	// acknowledge IRQ on the timer
 	IOWR_16DIRECT(TIMER_0_BASE, STATUS_OFFSET ,0x00);
@@ -61,27 +64,21 @@ void timer_interrupt (void* context, alt_u32 id) {
 int main()
 {
 	char  *data = header_data ;
-	unsigned char pixel[4];
 	int size_img = X_PIXEL_SIZE * Y_PIXEL_SIZE;
-	int k = 0;
-	int idx= 0;
 	int time;
 
-
-	//int controle = 0;
-	//alt_16 color = 0;
 	alt_16 color[size_img+1];
 	alt_16 color_reverse[size_img+1];
-	int x,y = 0;
-	//controle = IORD_16DIRECT(LCD_DMA_INT_0_BASE,CONTROL_OFFSET); // Adapt this line
 
 	// link irq to handler
 	alt_irq_register(TIMER_0_IRQ,(void*)2,(alt_isr_func)timer_interrupt);
 	// start timer and active irq
-	IOWR_16DIRECT(TIMER_0_BASE, CONTROL_OFFSET_TIMER ,0x7);
+	startTimer();
+
 
 	init_LCD();
-	reset = 1;
+	// stop le timer
+	stopTimer();
 
 	full_lcd_rgb(0,63,0);
 	full_lcd_rgb(0,0,31);
@@ -92,40 +89,21 @@ int main()
 	full_lcd_rgb(0,0,0);
 	full_lcd_rgb(31,63,31);
 
+	// Get array pixel from image of Gimp
+	imgToArray(color_reverse, data );
+	// Reverse array pixel
+	reverseImgArraz(color, color_reverse);
 
-	while(k++ < size_img) {
 
-	    pixel[0] = ((((data[2] - 33) & 0x3) << 6) | ((data[3] - 33))) / 8;
-	    pixel[1] = ((((data[1] - 33) & 0xF) << 4) | ((data[2] - 33) >> 2)) / 4;
-	    pixel[2] = (((data[0] - 33) << 2) | ((data[1] - 33) >> 4)) / 8;
-	    pixel[3] = 0;
-	    data += 4;
+	// Start timer for measure perf
+	startTimer();
 
-	    //HEADER_PIXEL(header_data, pixel)
+	// Send array pixel on LCD
+	LCD_write_Array(color);
 
-	    color_reverse[k-1] = (((pixel[2]) & 0x1f) | ((pixel[1]) & 0x3f) << 5 | ((pixel[0]) & 0x1f) << (5+6)) & 0xFFFF ;
+	// Stop timer for measure perf
+	time = stopTimer();
 
-	}
-
-	LCD_Write_Command(0x002c);     // write pixels
-	for(x=0; x < X_PIXEL_SIZE; ++x){
-		for(y=0; y < Y_PIXEL_SIZE; ++y){
-			LCD_Write_Data(color_reverse[ (319-x) + (320*y) ] );
-			color[idx++] = color_reverse[ (319-x) + (320*y) ];
-		}
-	}
-
-	full_lcd_rgb(31,63,31);
-
-	reset = 1;
-
-	LCD_Write_Command(0x002c);     // write pixels
-	k =0;
-	while(k < size_img) {
-		LCD_Write_Data(color[k++] );
-	}
-
-	time = counter;
 
   return 0;
 }
@@ -247,10 +225,64 @@ void init_LCD() {
 
   }
 
-  void LCD_Write_Command(int command) {
-      IOWR_16DIRECT(LCD_DMA_INT_0_BASE,COM_OFFSET,command); // Adapt this line
-  }
+void LCD_Write_Command(int command) {
+  IOWR_16DIRECT(LCD_DMA_INT_0_BASE,COM_OFFSET,command); // Adapt this line
+}
 
-  void LCD_Write_Data(int data) {
-      IOWR_16DIRECT(LCD_DMA_INT_0_BASE,DATA_OFFSET,data); // Adapt this line
-  }
+void LCD_Write_Data(int data) {
+  IOWR_16DIRECT(LCD_DMA_INT_0_BASE,DATA_OFFSET,data); // Adapt this line
+}
+void LCD_write_Array(alt_16* arrayPixels){
+	size_t k = 0;
+	size_t size_img = X_PIXEL_SIZE * Y_PIXEL_SIZE;
+
+	LCD_Write_Command(0x002c);
+	while(k < size_img) {
+		LCD_Write_Data(arrayPixels[k++] );
+	}
+}
+
+void imgToArray(alt_16* color_reverse, char  *dataImg ){
+  size_t k = 0;
+  unsigned char pixel[4];
+  size_t size_img = X_PIXEL_SIZE * Y_PIXEL_SIZE;
+
+  while(k++ < size_img) {
+
+		pixel[0] = ((((dataImg[2] - 33) & 0x3) << 6) | ((dataImg[3] - 33))) / 8;
+		pixel[1] = ((((dataImg[1] - 33) & 0xF) << 4) | ((dataImg[2] - 33) >> 2)) / 4;
+		pixel[2] = (((dataImg[0] - 33) << 2) | ((dataImg[1] - 33) >> 4)) / 8;
+		pixel[3] = 0;
+		dataImg += 4;
+
+		//HEADER_PIXEL(header_data, pixel)
+
+		color_reverse[k-1] = (((pixel[2]) & 0x1f) | ((pixel[1]) & 0x3f) << 5 | ((pixel[0]) & 0x1f) << (5+6)) & 0xFFFF ;
+
+	}
+
+}
+
+void reverseImgArraz(alt_16* color, alt_16* color_reverse) {
+	size_t x,y;
+	size_t idx= 0;
+
+	for(x=0; x < X_PIXEL_SIZE; ++x){
+		for(y=0; y < Y_PIXEL_SIZE; ++y){
+			color[idx++] = color_reverse[ (319-x) + (320*y) ];
+		}
+	}
+
+}
+void startTimer(void){
+	// met a 0 le counter
+	counter = 0;
+	// start le timer
+	IOWR_16DIRECT(TIMER_0_BASE, CONTROL_OFFSET_TIMER ,0x7);
+}
+size_t stopTimer(void){
+	// stop le timer
+	IOWR_16DIRECT(TIMER_0_BASE, CONTROL_OFFSET_TIMER ,0xB);
+
+	return counter * 10; // environ 70 ms
+}
