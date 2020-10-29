@@ -96,6 +96,7 @@ Common symbol       size              file
 
 alt_irq             0x100             ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
 errno               0x4               /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+time_ms             0x4               obj/default/LCD_DMA.o
 
 Memory Configuration
 
@@ -183,7 +184,7 @@ LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/
                 0x0000000001000244                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000001000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000001000244     0x2ec4
+.text           0x0000000001000244     0x2ed8
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -230,126 +231,127 @@ LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000001000244       0x4c ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
                 0x0000000001000244                _start
- .text          0x0000000001000290      0x9a8 obj/default/LCD_DMA.o
+ .text          0x0000000001000290      0x9bc obj/default/LCD_DMA.o
                 0x0000000001000290                timer_interrupt
-                0x00000000010002d4                main
-                0x0000000001000518                full_lcd_rgb
-                0x000000000100058c                full_lcd_color
-                0x0000000001000614                init_LCD
-                0x000000000100086c                LCD_Write_Command
-                0x00000000010008a0                LCD_Write_Data
-                0x00000000010008d4                LCD_write_Array
-                0x000000000100095c                imgToArray
-                0x0000000001000b1c                reverseImgArraz
-                0x0000000001000bd0                startTimer
-                0x0000000001000c04                stopTimer
- .text          0x0000000001000c38        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000001000c38        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000001000c38      0x180 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
-                0x0000000001000c38                alt_irq_register
- .text          0x0000000001000db8        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000001000db8       0xec ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
-                0x0000000001000e20                alt_load
- .text          0x0000000001000ea4       0x7c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000001000ea4                alt_main
- .text          0x0000000001000f20       0xd0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0000000001000f54                alt_irq_init
-                0x0000000001000f8c                alt_sys_init
- .text          0x0000000001000ff0      0x164 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
-                0x0000000001000ff0                altera_avalon_jtag_uart_read_fd
-                0x0000000001001050                altera_avalon_jtag_uart_write_fd
-                0x00000000010010b0                altera_avalon_jtag_uart_close_fd
-                0x0000000001001100                altera_avalon_jtag_uart_ioctl_fd
- .text          0x0000000001001154      0x3d4 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
-                0x0000000001001154                altera_avalon_jtag_uart_init
-                0x00000000010014c0                altera_avalon_jtag_uart_close
- .text          0x0000000001001528       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
-                0x0000000001001528                altera_avalon_jtag_uart_ioctl
- .text          0x0000000001001618      0x21c ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
-                0x0000000001001618                altera_avalon_jtag_uart_read
- .text          0x0000000001001834      0x224 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x0000000001001834                altera_avalon_jtag_uart_write
- .text          0x0000000001001a58       0xf4 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
-                0x0000000001001ad0                alt_avalon_timer_sc_init
- .text          0x0000000001001b4c      0x12c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
-                0x0000000001001b4c                alt_alarm_start
- .text          0x0000000001001c78      0x10c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
-                0x0000000001001cb4                close
- .text          0x0000000001001d84       0x48 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000001001d84                alt_dcache_flush_all
- .text          0x0000000001001dcc       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- .text          0x0000000001001df8       0xe0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
-                0x0000000001001e34                alt_dev_llist_insert
- .text          0x0000000001001ed8       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
-                0x0000000001001ed8                _do_ctors
- .text          0x0000000001001f38       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
-                0x0000000001001f38                _do_dtors
- .text          0x0000000001001f98        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
- .text          0x0000000001001f98        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
- .text          0x0000000001001f98       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000001001f98                alt_icache_flush_all
- .text          0x0000000001001fcc      0x1b0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
-                0x0000000001001fcc                alt_ic_isr_register
-                0x000000000100201c                alt_ic_irq_enable
-                0x00000000010020a4                alt_ic_irq_disable
-                0x0000000001002130                alt_ic_irq_enabled
- .text          0x000000000100217c       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
-                0x000000000100217c                alt_iic_isr_register
- .text          0x000000000100226c       0x9c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x000000000100226c                alt_exception_cause_generated_bad_addr
- .text          0x0000000001002308      0x140 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
-                0x00000000010023cc                alt_io_redirect
- .text          0x0000000001002448      0x254 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
-                0x0000000001002548                open
- .text          0x000000000100269c       0x64 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
-                0x000000000100269c                alt_release_fd
- .text          0x0000000001002700      0x1a4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
-                0x0000000001002700                alt_alarm_stop
-                0x000000000100279c                alt_tick
- .text          0x00000000010028a4       0x24 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x00000000010028a4                altera_nios2_gen2_irq_init
- .text          0x00000000010028c8       0x90 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
-                0x00000000010028c8                alt_find_dev
- .text          0x0000000001002958      0x108 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
-                0x0000000001002958                alt_find_file
- .text          0x0000000001002a60       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
-                0x0000000001002a60                alt_get_fd
- .text          0x0000000001002b04       0x90 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
-                0x0000000001002b04                alt_icache_flush
- .text          0x0000000001002b94        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .text.atexit   0x0000000001002b94       0x14 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
-                0x0000000001002b94                atexit
- .text          0x0000000001002ba8        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .text.exit     0x0000000001002ba8       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
-                0x0000000001002ba8                exit
- .text          0x0000000001002be0        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
- .text          0x0000000001002be0        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .text          0x0000000001002be0        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .text.memcmp   0x0000000001002be0       0x7c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
-                0x0000000001002be0                memcmp
- .text          0x0000000001002c5c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .text.memcpy   0x0000000001002c5c      0x148 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
-                0x0000000001002c5c                memcpy
- .text          0x0000000001002da4        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .text.strlen   0x0000000001002da4       0x98 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
-                0x0000000001002da4                strlen
- .text          0x0000000001002e3c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                0x00000000010002d4                dma_interrupt
+                0x000000000100031c                main
+                0x0000000001000530                full_lcd_rgb
+                0x00000000010005a4                full_lcd_color
+                0x000000000100062c                init_LCD
+                0x0000000001000884                LCD_Write_Command
+                0x00000000010008b8                LCD_Write_Data
+                0x00000000010008ec                LCD_write_Array
+                0x0000000001000974                imgToArray
+                0x0000000001000b34                reverseImgArraz
+                0x0000000001000be8                startTimer
+                0x0000000001000c1c                stopTimer
+ .text          0x0000000001000c4c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000001000c4c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000001000c4c      0x180 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+                0x0000000001000c4c                alt_irq_register
+ .text          0x0000000001000dcc        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000001000dcc       0xec ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000001000e34                alt_load
+ .text          0x0000000001000eb8       0x7c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000001000eb8                alt_main
+ .text          0x0000000001000f34       0xd0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000001000f68                alt_irq_init
+                0x0000000001000fa0                alt_sys_init
+ .text          0x0000000001001004      0x164 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x0000000001001004                altera_avalon_jtag_uart_read_fd
+                0x0000000001001064                altera_avalon_jtag_uart_write_fd
+                0x00000000010010c4                altera_avalon_jtag_uart_close_fd
+                0x0000000001001114                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x0000000001001168      0x3d4 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x0000000001001168                altera_avalon_jtag_uart_init
+                0x00000000010014d4                altera_avalon_jtag_uart_close
+ .text          0x000000000100153c       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x000000000100153c                altera_avalon_jtag_uart_ioctl
+ .text          0x000000000100162c      0x21c ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x000000000100162c                altera_avalon_jtag_uart_read
+ .text          0x0000000001001848      0x224 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000001001848                altera_avalon_jtag_uart_write
+ .text          0x0000000001001a6c       0xf4 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x0000000001001ae4                alt_avalon_timer_sc_init
+ .text          0x0000000001001b60      0x12c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+                0x0000000001001b60                alt_alarm_start
+ .text          0x0000000001001c8c      0x10c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+                0x0000000001001cc8                close
+ .text          0x0000000001001d98       0x48 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000001001d98                alt_dcache_flush_all
+ .text          0x0000000001001de0       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .text          0x0000000001001e0c       0xe0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+                0x0000000001001e48                alt_dev_llist_insert
+ .text          0x0000000001001eec       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+                0x0000000001001eec                _do_ctors
+ .text          0x0000000001001f4c       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+                0x0000000001001f4c                _do_dtors
+ .text          0x0000000001001fac        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .text          0x0000000001001fac        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000001001fac       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000001001fac                alt_icache_flush_all
+ .text          0x0000000001001fe0      0x1b0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+                0x0000000001001fe0                alt_ic_isr_register
+                0x0000000001002030                alt_ic_irq_enable
+                0x00000000010020b8                alt_ic_irq_disable
+                0x0000000001002144                alt_ic_irq_enabled
+ .text          0x0000000001002190       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x0000000001002190                alt_iic_isr_register
+ .text          0x0000000001002280       0x9c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000001002280                alt_exception_cause_generated_bad_addr
+ .text          0x000000000100231c      0x140 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+                0x00000000010023e0                alt_io_redirect
+ .text          0x000000000100245c      0x254 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+                0x000000000100255c                open
+ .text          0x00000000010026b0       0x64 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+                0x00000000010026b0                alt_release_fd
+ .text          0x0000000001002714      0x1a4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+                0x0000000001002714                alt_alarm_stop
+                0x00000000010027b0                alt_tick
+ .text          0x00000000010028b8       0x24 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000010028b8                altera_nios2_gen2_irq_init
+ .text          0x00000000010028dc       0x90 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+                0x00000000010028dc                alt_find_dev
+ .text          0x000000000100296c      0x108 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+                0x000000000100296c                alt_find_file
+ .text          0x0000000001002a74       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+                0x0000000001002a74                alt_get_fd
+ .text          0x0000000001002b18       0x90 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+                0x0000000001002b18                alt_icache_flush
+ .text          0x0000000001002ba8        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .text.atexit   0x0000000001002ba8       0x14 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                0x0000000001002ba8                atexit
+ .text          0x0000000001002bbc        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .text.exit     0x0000000001002bbc       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                0x0000000001002bbc                exit
+ .text          0x0000000001002bf4        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x0000000001002bf4        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .text          0x0000000001002bf4        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x0000000001002bf4       0x7c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                0x0000000001002bf4                memcmp
+ .text          0x0000000001002c70        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .text.memcpy   0x0000000001002c70      0x148 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                0x0000000001002c70                memcpy
+ .text          0x0000000001002db8        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .text.strlen   0x0000000001002db8       0x98 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                0x0000000001002db8                strlen
+ .text          0x0000000001002e50        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
  .text.__register_exitproc
-                0x0000000001002e3c      0x118 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
-                0x0000000001002e3c                __register_exitproc
- .text          0x0000000001002f54        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0000000001002e50      0x118 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                0x0000000001002e50                __register_exitproc
+ .text          0x0000000001002f68        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
  .text.__call_exitprocs
-                0x0000000001002f54      0x180 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
-                0x0000000001002f54                __call_exitprocs
- .text          0x00000000010030d4       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
-                0x00000000010030d4                _exit
+                0x0000000001002f68      0x180 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x0000000001002f68                __call_exitprocs
+ .text          0x00000000010030e8       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+                0x00000000010030e8                _exit
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000001003108                . = ALIGN (0x4)
+                0x000000000100311c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -362,212 +364,214 @@ LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/
  *(.eh_frame)
  *(.gcc_except_table .gcc_except_table.*)
  *(.dynamic)
-                0x0000000001003108                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+                0x000000000100311c                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
  *(.ctors)
  *(SORT(.ctors.*))
-                0x0000000001003108                PROVIDE (__CTOR_END__, ABSOLUTE (.))
-                0x0000000001003108                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+                0x000000000100311c                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x000000000100311c                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
  *(.dtors)
  *(SORT(.dtors.*))
-                0x0000000001003108                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+                0x000000000100311c                PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000001003108                . = ALIGN (0x4)
+                0x000000000100311c                . = ALIGN (0x4)
 
-.rodata         0x0000000001003108    0x4b034
-                0x0000000001003108                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000001003108                . = ALIGN (0x4)
+.rodata         0x000000000100311c    0x4b034
+                0x000000000100311c                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x000000000100311c                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000000001003108    0x4b001 obj/default/LCD_DMA.o
- *fill*         0x000000000104e109        0x3 
- .rodata        0x000000000104e10c        0xf ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- *fill*         0x000000000104e11b        0x1 
- .rodata        0x000000000104e11c        0xf ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- *fill*         0x000000000104e12b        0x1 
- .rodata        0x000000000104e12c        0xa ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- *fill*         0x000000000104e136        0x2 
+ .rodata        0x000000000100311c    0x4b001 obj/default/LCD_DMA.o
+ *fill*         0x000000000104e11d        0x3 
+ .rodata        0x000000000104e120        0xf ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ *fill*         0x000000000104e12f        0x1 
+ .rodata        0x000000000104e130        0xf ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x000000000104e13f        0x1 
+ .rodata        0x000000000104e140        0xa ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ *fill*         0x000000000104e14a        0x2 
  .rodata.str1.4
-                0x000000000104e138        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000104e14c        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
                                           0x2 (size before relaxing)
  *(.rodata1)
-                0x000000000104e13c                . = ALIGN (0x4)
-                0x000000000104e13c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000001003108                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x000000000104e150                . = ALIGN (0x4)
+                0x000000000104e150                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x000000000100311c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x000000000104e13c     0x165c load address 0x000000000104f798
-                0x000000000104e13c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x000000000104e13c                . = ALIGN (0x4)
+.rwdata         0x000000000104e150     0x165c load address 0x000000000104f7ac
+                0x000000000104e150                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000000000104e150                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
- .data          0x000000000104e13c        0x0 obj/default/LCD_DMA.o
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
- .data          0x000000000104e13c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- .data          0x000000000104e13c     0x1060 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
- .data          0x000000000104f19c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x000000000104f19c      0x1a8 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
-                0x000000000104f19c                alt_dev_null
-                0x000000000104f1c4                alt_fd_list
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
- .data          0x000000000104f344        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
- .data          0x000000000104f344        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .data          0x000000000104f344        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .data          0x000000000104f344        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
+ .data          0x000000000104e150        0x0 obj/default/LCD_DMA.o
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x000000000104e150        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x000000000104e150     0x1060 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .data          0x000000000104f1b0        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000000000104f1b0      0x1a8 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+                0x000000000104f1b0                alt_dev_null
+                0x000000000104f1d8                alt_fd_list
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .data          0x000000000104f358        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .data          0x000000000104f358        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .data          0x000000000104f358        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .data          0x000000000104f358        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
  .data.impure_data
-                0x000000000104f344      0x424 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
- .data          0x000000000104f768        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .data          0x000000000104f768        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .data          0x000000000104f768        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .data          0x000000000104f768        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .data          0x000000000104f768        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .data          0x000000000104f768        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .data          0x000000000104f768        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
-                0x0000000001057768                _gp = ABSOLUTE ((. + 0x8000))
+                0x000000000104f358      0x424 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data          0x000000000104f77c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .data          0x000000000104f77c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .data          0x000000000104f77c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x000000000104f77c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .data          0x000000000104f77c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .data          0x000000000104f77c        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x000000000104f77c        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+                0x000000000105777c                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x000000000104f768        0x4 obj/default/LCD_DMA.o
- .sdata         0x000000000104f76c        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x000000000104f76c                alt_priority_mask
- .sdata         0x000000000104f770       0x14 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
-                0x000000000104f770                alt_fs_list
-                0x000000000104f778                alt_dev_list
-                0x000000000104f780                alt_max_fd
- .sdata         0x000000000104f784        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
-                0x000000000104f784                alt_errno
- .sdata         0x000000000104f788        0x8 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
-                0x000000000104f788                alt_alarm_list
+ .sdata         0x000000000104f77c        0x4 obj/default/LCD_DMA.o
+ .sdata         0x000000000104f780        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x000000000104f780                alt_priority_mask
+ .sdata         0x000000000104f784       0x14 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+                0x000000000104f784                alt_fs_list
+                0x000000000104f78c                alt_dev_list
+                0x000000000104f794                alt_max_fd
+ .sdata         0x000000000104f798        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+                0x000000000104f798                alt_errno
+ .sdata         0x000000000104f79c        0x8 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+                0x000000000104f79c                alt_alarm_list
  .sdata._global_impure_ptr
-                0x000000000104f790        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
-                0x000000000104f790                _global_impure_ptr
+                0x000000000104f7a4        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000104f7a4                _global_impure_ptr
  .sdata._impure_ptr
-                0x000000000104f794        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
-                0x000000000104f794                _impure_ptr
+                0x000000000104f7a8        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000104f7a8                _impure_ptr
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x000000000104f798                . = ALIGN (0x4)
-                0x000000000104f798                _edata = ABSOLUTE (.)
+                0x000000000104f7ac                . = ALIGN (0x4)
+                0x000000000104f7ac                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x000000000104f798                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x000000000104f798                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x000000000104f7ac                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x000000000104f7ac                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000001050df4      0x124
-                0x0000000001050df4                __bss_start = ABSOLUTE (.)
+.bss            0x0000000001050e08      0x128
+                0x0000000001050e08                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000001050df4        0x4 obj/default/LCD_DMA.o
-                0x0000000001050df4                counter
- .sbss          0x0000000001050df8        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0000000001050df8                alt_irq_active
- .sbss          0x0000000001050dfc        0xc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000001050dfc                alt_argc
-                0x0000000001050e00                alt_argv
-                0x0000000001050e04                alt_envp
- .sbss          0x0000000001050e08        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000001050e08                alt_instruction_exception_handler
- .sbss          0x0000000001050e0c        0x8 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
-                0x0000000001050e0c                _alt_tick_rate
-                0x0000000001050e10                _alt_nticks
- .sbss          0x0000000001050e14        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
-                0x0000000001050e14                errno
+ .sbss          0x0000000001050e08        0x4 obj/default/LCD_DMA.o
+                0x0000000001050e08                counter
+ .sbss          0x0000000001050e0c        0x4 obj/default/LCD_DMA.o
+                0x0000000001050e0c                time_ms
+ .sbss          0x0000000001050e10        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000001050e10                alt_irq_active
+ .sbss          0x0000000001050e14        0xc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000001050e14                alt_argc
+                0x0000000001050e18                alt_argv
+                0x0000000001050e1c                alt_envp
+ .sbss          0x0000000001050e20        0x4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000001050e20                alt_instruction_exception_handler
+ .sbss          0x0000000001050e24        0x8 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+                0x0000000001050e24                _alt_tick_rate
+                0x0000000001050e28                _alt_nticks
+ .sbss          0x0000000001050e2c        0x4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                0x0000000001050e2c                errno
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000001050e18        0x0 obj/default/LCD_DMA.o
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .bss           0x0000000001050e18        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .bss           0x0000000001050e18        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000001050e30        0x0 obj/default/LCD_DMA.o
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000001050e30        0x0 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000001050e30        0x0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
  *(COMMON)
- COMMON         0x0000000001050e18      0x100 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
-                0x0000000001050e18                alt_irq
-                0x0000000001050f18                . = ALIGN (0x4)
-                0x0000000001050f18                __bss_end = ABSOLUTE (.)
+ COMMON         0x0000000001050e30      0x100 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000001050e30                alt_irq
+                0x0000000001050f30                . = ALIGN (0x4)
+                0x0000000001050f30                __bss_end = ABSOLUTE (.)
 
 .SDRAM_controller
-                0x0000000001050f18        0x0
+                0x0000000001050f30        0x0
                 [!provide]                        PROVIDE (_alt_partition_SDRAM_controller_start, ABSOLUTE (.))
  *(.SDRAM_controller .SDRAM_controller. SDRAM_controller.*)
-                0x0000000001050f18                . = ALIGN (0x4)
+                0x0000000001050f30                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_SDRAM_controller_end, ABSOLUTE (.))
-                0x0000000001050f18                _end = ABSOLUTE (.)
-                0x0000000001050f18                end = ABSOLUTE (.)
-                0x0000000001050f18                __alt_stack_base = ABSOLUTE (.)
+                0x0000000001050f30                _end = ABSOLUTE (.)
+                0x0000000001050f30                end = ABSOLUTE (.)
+                0x0000000001050f30                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_SDRAM_controller_load_addr, LOADADDR (.SDRAM_controller))
 
 .stab
@@ -748,288 +752,288 @@ LOAD /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x7de0
+.debug_info     0x0000000000000000     0x7e3e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x80 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000080      0x3ca obj/default/LCD_DMA.o
- .debug_info    0x000000000000044a       0x89 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x00000000000004d3      0x187 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x000000000000065a      0x324 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
- .debug_info    0x000000000000097e       0x88 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x0000000000000a06      0x145 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000000b4b      0x131 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000000c7c      0x4d9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x0000000000001155      0x52e ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .debug_info    0x0000000000001683      0x3a0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .debug_info    0x0000000000001a23      0x280 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .debug_info    0x0000000000001ca3      0x345 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_info    0x0000000000001fe8      0x340 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_info    0x0000000000002328      0x226 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
- .debug_info    0x000000000000254e      0x2cc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
- .debug_info    0x000000000000281a      0x321 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
- .debug_info    0x0000000000002b3b       0xa5 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000002be0      0x49c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- .debug_info    0x000000000000307c      0x1a9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_info    0x0000000000003225       0x83 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
- .debug_info    0x00000000000032a8       0x83 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
- .debug_info    0x000000000000332b       0xa6 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
- .debug_info    0x00000000000033d1       0x8f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x0000000000003460       0x92 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x00000000000034f2      0x350 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
- .debug_info    0x0000000000003842      0x1ef ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x0000000000003a31      0x1e7 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x0000000000003c18      0x4a5 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
- .debug_info    0x00000000000040bd      0x3bb ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
- .debug_info    0x0000000000004478      0x2b0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
- .debug_info    0x0000000000004728      0x299 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
- .debug_info    0x00000000000049c1       0x92 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_info    0x0000000000004a53      0x2e9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_info    0x0000000000004d3c      0x2e6 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
- .debug_info    0x0000000000005022      0x310 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
- .debug_info    0x0000000000005332       0xdc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_info    0x000000000000540e       0xfe /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .debug_info    0x000000000000550c      0x8e4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .debug_info    0x0000000000005df0      0x8a1 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
- .debug_info    0x0000000000006691       0x8a /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .debug_info    0x000000000000671b      0x11a /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .debug_info    0x0000000000006835      0x144 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .debug_info    0x0000000000006979       0xe2 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .debug_info    0x0000000000006a5b      0x934 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .debug_info    0x000000000000738f      0x965 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .debug_info    0x0000000000007cf4       0xec ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+ .debug_info    0x0000000000000080      0x428 obj/default/LCD_DMA.o
+ .debug_info    0x00000000000004a8       0x89 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000531      0x187 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x00000000000006b8      0x324 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_info    0x00000000000009dc       0x88 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000000a64      0x145 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000ba9      0x131 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000cda      0x4d9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000000000011b3      0x52e ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x00000000000016e1      0x3a0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_info    0x0000000000001a81      0x280 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_info    0x0000000000001d01      0x345 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x0000000000002046      0x340 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000002386      0x226 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x00000000000025ac      0x2cc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_info    0x0000000000002878      0x321 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .debug_info    0x0000000000002b99       0xa5 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000002c3e      0x49c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_info    0x00000000000030da      0x1a9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000003283       0x83 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x0000000000003306       0x83 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x0000000000003389       0xa6 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_info    0x000000000000342f       0x8f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x00000000000034be       0x92 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000003550      0x350 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_info    0x00000000000038a0      0x1ef ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x0000000000003a8f      0x1e7 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000003c76      0x4a5 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x000000000000411b      0x3bb ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .debug_info    0x00000000000044d6      0x2b0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x0000000000004786      0x299 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_info    0x0000000000004a1f       0x92 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000004ab1      0x2e9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000000000004d9a      0x2e6 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x0000000000005080      0x310 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x0000000000005390       0xdc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_info    0x000000000000546c       0xfe /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000556a      0x8e4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000005e4e      0x8a1 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_info    0x00000000000066ef       0x8a /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_info    0x0000000000006779      0x11a /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000006893      0x144 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_info    0x00000000000069d7       0xe2 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000006ab9      0x934 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_info    0x00000000000073ed      0x965 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x0000000000007d52       0xec ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
 
-.debug_abbrev   0x0000000000000000     0x2d67
+.debug_abbrev   0x0000000000000000     0x2d90
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012      0x1a3 obj/default/LCD_DMA.o
- .debug_abbrev  0x00000000000001b5       0x12 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_abbrev  0x00000000000001c7      0x122 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_abbrev  0x00000000000002e9      0x186 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
- .debug_abbrev  0x000000000000046f       0x40 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_abbrev  0x00000000000004af       0x9f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x000000000000054e       0xba ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x0000000000000608      0x187 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x000000000000078f      0x127 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .debug_abbrev  0x00000000000008b6      0x19e ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .debug_abbrev  0x0000000000000a54      0x111 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .debug_abbrev  0x0000000000000b65      0x1aa ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_abbrev  0x0000000000000d0f      0x1a8 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_abbrev  0x0000000000000eb7      0x155 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
- .debug_abbrev  0x000000000000100c      0x162 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
- .debug_abbrev  0x000000000000116e      0x11f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
- .debug_abbrev  0x000000000000128d       0x5a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x00000000000012e7       0xd9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- .debug_abbrev  0x00000000000013c0      0x114 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_abbrev  0x00000000000014d4       0x79 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
- .debug_abbrev  0x000000000000154d       0x79 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
- .debug_abbrev  0x00000000000015c6       0x5a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
- .debug_abbrev  0x0000000000001620       0x12 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_abbrev  0x0000000000001632       0x42 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x0000000000001674      0x163 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
- .debug_abbrev  0x00000000000017d7      0x169 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_abbrev  0x0000000000001940       0xdc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_abbrev  0x0000000000001a1c      0x114 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
- .debug_abbrev  0x0000000000001b30      0x148 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
- .debug_abbrev  0x0000000000001c78       0xde ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
- .debug_abbrev  0x0000000000001d56      0x15a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
- .debug_abbrev  0x0000000000001eb0       0x42 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_abbrev  0x0000000000001ef2       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_abbrev  0x0000000000001fe2       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
- .debug_abbrev  0x00000000000020d2      0x10d ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
- .debug_abbrev  0x00000000000021df       0x8c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_abbrev  0x000000000000226b       0xaa /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .debug_abbrev  0x0000000000002315      0x1e5 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .debug_abbrev  0x00000000000024fa      0x18f /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
- .debug_abbrev  0x0000000000002689       0x37 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .debug_abbrev  0x00000000000026c0       0x7f /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .debug_abbrev  0x000000000000273f       0xa3 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .debug_abbrev  0x00000000000027e2       0x90 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .debug_abbrev  0x0000000000002872      0x21e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .debug_abbrev  0x0000000000002a90      0x22e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .debug_abbrev  0x0000000000002cbe       0xa9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+ .debug_abbrev  0x0000000000000012      0x1cc obj/default/LCD_DMA.o
+ .debug_abbrev  0x00000000000001de       0x12 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00000000000001f0      0x122 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000000312      0x186 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_abbrev  0x0000000000000498       0x40 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x00000000000004d8       0x9f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000000577       0xba ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000631      0x187 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000007b8      0x127 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x00000000000008df      0x19e ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_abbrev  0x0000000000000a7d      0x111 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_abbrev  0x0000000000000b8e      0x1aa ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x0000000000000d38      0x1a8 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000000ee0      0x155 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x0000000000001035      0x162 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_abbrev  0x0000000000001197      0x11f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x00000000000012b6       0x5a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000001310       0xd9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x00000000000013e9      0x114 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x00000000000014fd       0x79 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x0000000000001576       0x79 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x00000000000015ef       0x5a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x0000000000001649       0x12 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x000000000000165b       0x42 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x000000000000169d      0x163 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x0000000000001800      0x169 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000001969       0xdc ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000001a45      0x114 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x0000000000001b59      0x148 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x0000000000001ca1       0xde ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x0000000000001d7f      0x15a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x0000000000001ed9       0x42 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000001f1b       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x000000000000200b       0xf0 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x00000000000020fb      0x10d ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x0000000000002208       0x8c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_abbrev  0x0000000000002294       0xaa /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x000000000000233e      0x1e5 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000002523      0x18f /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x00000000000026b2       0x37 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x00000000000026e9       0x7f /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000000000002768       0xa3 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x000000000000280b       0x90 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x000000000000289b      0x21e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000002ab9      0x22e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000002ce7       0xa9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
 
-.debug_line     0x0000000000000000     0x2db1
+.debug_line     0x0000000000000000     0x2dbe
  *(.debug_line)
  .debug_line    0x0000000000000000       0x72 ../LCD_DMA_controller_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000072      0x221 obj/default/LCD_DMA.o
- .debug_line    0x0000000000000293       0x6b ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x00000000000002fe       0xaa ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x00000000000003a8      0x155 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
- .debug_line    0x00000000000004fd       0x50 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x000000000000054d       0x8e ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
- .debug_line    0x00000000000005db       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- .debug_line    0x000000000000067f      0x152 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x00000000000007d1      0x12f ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .debug_line    0x0000000000000900      0x18b ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .debug_line    0x0000000000000a8b      0x131 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .debug_line    0x0000000000000bbc      0x171 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_line    0x0000000000000d2d      0x170 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x0000000000000e9d       0xfd ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
- .debug_line    0x0000000000000f9a       0xf9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
- .debug_line    0x0000000000001093      0x16c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
- .debug_line    0x00000000000011ff       0x61 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000001260       0xff ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- .debug_line    0x000000000000135f       0xcf ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_line    0x000000000000142e       0x59 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
- .debug_line    0x0000000000001487       0x59 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
- .debug_line    0x00000000000014e0       0x51 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
- .debug_line    0x0000000000001531       0xb3 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x00000000000015e4       0x50 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000001634       0xeb ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
- .debug_line    0x000000000000171f       0xdb ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x00000000000017fa       0xba ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x00000000000018b4      0x13a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
- .debug_line    0x00000000000019ee      0x128 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
- .debug_line    0x0000000000001b16       0xae ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
- .debug_line    0x0000000000001bc4       0xff ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
- .debug_line    0x0000000000001cc3       0x51 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x0000000000001d14       0xb5 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_line    0x0000000000001dc9       0xd1 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
- .debug_line    0x0000000000001e9a       0xd4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
- .debug_line    0x0000000000001f6e       0x81 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_line    0x0000000000001fef       0xe4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .debug_line    0x00000000000020d3      0x1f9 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .debug_line    0x00000000000022cc      0x15d /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
- .debug_line    0x0000000000002429       0x5c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
- .debug_line    0x0000000000002485      0x173 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .debug_line    0x00000000000025f8      0x189 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .debug_line    0x0000000000002781      0x16c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .debug_line    0x00000000000028ed      0x21c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .debug_line    0x0000000000002b09      0x237 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .debug_line    0x0000000000002d40       0x71 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+ .debug_line    0x0000000000000072      0x22e obj/default/LCD_DMA.o
+ .debug_line    0x00000000000002a0       0x6b ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x000000000000030b       0xaa ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000003b5      0x155 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_line    0x000000000000050a       0x50 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x000000000000055a       0x8e ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000005e8       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000068c      0x152 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000007de      0x12f ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x000000000000090d      0x18b ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x0000000000000a98      0x131 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x0000000000000bc9      0x171 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x0000000000000d3a      0x170 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000000eaa       0xfd ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x0000000000000fa7       0xf9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_line    0x00000000000010a0      0x16c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .debug_line    0x000000000000120c       0x61 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x000000000000126d       0xff ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_line    0x000000000000136c       0xcf ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x000000000000143b       0x59 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x0000000000001494       0x59 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x00000000000014ed       0x51 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_line    0x000000000000153e       0xb3 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x00000000000015f1       0x50 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000001641       0xeb ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_line    0x000000000000172c       0xdb ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000001807       0xba ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x00000000000018c1      0x13a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x00000000000019fb      0x128 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .debug_line    0x0000000000001b23       0xae ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x0000000000001bd1       0xff ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_line    0x0000000000001cd0       0x51 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000001d21       0xb5 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x0000000000001dd6       0xd1 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x0000000000001ea7       0xd4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x0000000000001f7b       0x81 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_line    0x0000000000001ffc       0xe4 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_line    0x00000000000020e0      0x1f9 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_line    0x00000000000022d9      0x15d /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000002436       0x5c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000002492      0x173 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000002605      0x189 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line    0x000000000000278e      0x16c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_line    0x00000000000028fa      0x21c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000002b16      0x237 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000002d4d       0x71 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
 
-.debug_frame    0x0000000000000000      0xcf4
+.debug_frame    0x0000000000000000      0xd00
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x1ec obj/default/LCD_DMA.o
- .debug_frame   0x00000000000001ec       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_frame   0x0000000000000224       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
- .debug_frame   0x0000000000000258       0x5c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
- .debug_frame   0x00000000000002b4       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
- .debug_frame   0x00000000000002e0       0x88 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x0000000000000368       0xb0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
- .debug_frame   0x0000000000000418       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
- .debug_frame   0x00000000000004bc       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
- .debug_frame   0x00000000000004f0       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_frame   0x0000000000000528       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_frame   0x0000000000000560       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
- .debug_frame   0x00000000000005c0       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
- .debug_frame   0x00000000000005f4       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
- .debug_frame   0x0000000000000654       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x0000000000000688       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
- .debug_frame   0x00000000000006bc       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
- .debug_frame   0x000000000000071c       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
- .debug_frame   0x0000000000000754       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
- .debug_frame   0x000000000000078c       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x00000000000007c4       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
- .debug_frame   0x0000000000000868       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_frame   0x00000000000008a0       0x5c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_frame   0x00000000000008fc       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
- .debug_frame   0x000000000000095c       0x84 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
- .debug_frame   0x00000000000009e0       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
- .debug_frame   0x0000000000000a14       0x5c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
- .debug_frame   0x0000000000000a70       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_frame   0x0000000000000aa4       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
- .debug_frame   0x0000000000000adc       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
- .debug_frame   0x0000000000000b14       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
- .debug_frame   0x0000000000000b48       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
- .debug_frame   0x0000000000000b7c       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
- .debug_frame   0x0000000000000b9c       0x28 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
- .debug_frame   0x0000000000000bc4       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
- .debug_frame   0x0000000000000be4       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
- .debug_frame   0x0000000000000c1c       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
- .debug_frame   0x0000000000000c3c       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
- .debug_frame   0x0000000000000c74       0x54 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000000cc8       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+ .debug_frame   0x0000000000000000      0x1f8 obj/default/LCD_DMA.o
+ .debug_frame   0x00000000000001f8       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x0000000000000230       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_frame   0x0000000000000264       0x5c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000002c0       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000002ec       0x88 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000374       0xb0 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x0000000000000424       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_frame   0x00000000000004c8       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_frame   0x00000000000004fc       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x0000000000000534       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x000000000000056c       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x00000000000005cc       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_frame   0x0000000000000600       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .debug_frame   0x0000000000000660       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000694       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000000000006c8       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x0000000000000728       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x0000000000000760       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x0000000000000798       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000007d0       0xa4 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000874       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x00000000000008ac       0x5c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x0000000000000908       0x60 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x0000000000000968       0x84 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .debug_frame   0x00000000000009ec       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x0000000000000a20       0x5c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x0000000000000a7c       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000ab0       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000000ae8       0x38 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x0000000000000b20       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x0000000000000b54       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_frame   0x0000000000000b88       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000ba8       0x28 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000bd0       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000bf0       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000000c28       0x20 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000c48       0x38 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000c80       0x54 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000cd4       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
 
-.debug_str      0x0000000000000000     0x1bc6
+.debug_str      0x0000000000000000     0x1bdc
  *(.debug_str)
- .debug_str     0x0000000000000000      0x21b obj/default/LCD_DMA.o
-                                        0x271 (size before relaxing)
- .debug_str     0x000000000000021b       0x9e ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x0000000000000000      0x231 obj/default/LCD_DMA.o
+                                        0x287 (size before relaxing)
+ .debug_str     0x0000000000000231       0x9e ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_handler.o)
                                         0x1a6 (size before relaxing)
- .debug_str     0x00000000000002b9       0x99 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_str     0x00000000000002cf       0x99 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_register.o)
                                         0x217 (size before relaxing)
- .debug_str     0x0000000000000352       0x17 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_str     0x0000000000000368       0x17 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_irq_vars.o)
                                         0x149 (size before relaxing)
- .debug_str     0x0000000000000369       0xe9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
+ .debug_str     0x000000000000037f       0xe9 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_load.o)
                                         0x221 (size before relaxing)
- .debug_str     0x0000000000000452       0x70 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
+ .debug_str     0x0000000000000468       0x70 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_main.o)
                                         0x1ac (size before relaxing)
- .debug_str     0x00000000000004c2      0x1d1 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x00000000000004d8      0x1d1 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_sys_init.o)
                                         0x39d (size before relaxing)
- .debug_str     0x0000000000000693       0xb9 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_str     0x00000000000006a9       0xb9 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
                                         0x3b3 (size before relaxing)
- .debug_str     0x000000000000074c       0xd1 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_str     0x0000000000000762       0xd1 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_init.o)
                                         0x347 (size before relaxing)
- .debug_str     0x000000000000081d       0x4a ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_str     0x0000000000000833       0x4a ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
                                         0x2a2 (size before relaxing)
- .debug_str     0x0000000000000867       0x48 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_str     0x000000000000087d       0x48 ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_read.o)
                                         0x2f7 (size before relaxing)
- .debug_str     0x00000000000008af       0x4a ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_str     0x00000000000008c5       0x4a ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
                                         0x2f8 (size before relaxing)
- .debug_str     0x00000000000008f9       0x6d ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_str     0x000000000000090f       0x6d ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_avalon_timer_sc.o)
                                         0x25a (size before relaxing)
- .debug_str     0x0000000000000966       0x59 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
+ .debug_str     0x000000000000097c       0x59 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_alarm_start.o)
                                         0x28d (size before relaxing)
- .debug_str     0x00000000000009bf       0x44 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
+ .debug_str     0x00000000000009d5       0x44 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_close.o)
                                         0x21a (size before relaxing)
- .debug_str     0x0000000000000a03       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x0000000000000a19       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
                                         0x164 (size before relaxing)
- .debug_str     0x0000000000000a37      0x120 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
+ .debug_str     0x0000000000000a4d      0x120 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev.o)
                                         0x314 (size before relaxing)
- .debug_str     0x0000000000000b57       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_str     0x0000000000000b6d       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_dev_llist_insert.o)
                                         0x1db (size before relaxing)
- .debug_str     0x0000000000000b8b       0x48 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
+ .debug_str     0x0000000000000ba1       0x48 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_ctors.o)
                                          0xdf (size before relaxing)
- .debug_str     0x0000000000000bd3       0x4c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
+ .debug_str     0x0000000000000be9       0x4c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_do_dtors.o)
                                          0xde (size before relaxing)
- .debug_str     0x0000000000000c1f       0x14 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
+ .debug_str     0x0000000000000c35       0x14 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_errno.o)
                                         0x154 (size before relaxing)
- .debug_str     0x0000000000000c33       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x0000000000000c49       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush_all.o)
                                         0x164 (size before relaxing)
- .debug_str     0x0000000000000c67       0x70 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_str     0x0000000000000c7d       0x70 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic.o)
                                         0x24d (size before relaxing)
- .debug_str     0x0000000000000cd7       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_str     0x0000000000000ced       0x34 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_iic_isr_register.o)
                                         0x1f7 (size before relaxing)
- .debug_str     0x0000000000000d0b      0x48b ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_str     0x0000000000000d21      0x48b ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
                                         0x5af (size before relaxing)
- .debug_str     0x0000000000001196       0x56 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
+ .debug_str     0x00000000000011ac       0x56 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_io_redirect.o)
                                         0x325 (size before relaxing)
- .debug_str     0x00000000000011ec       0x2f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
+ .debug_str     0x0000000000001202       0x2f ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_open.o)
                                         0x25a (size before relaxing)
- .debug_str     0x000000000000121b       0x28 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
+ .debug_str     0x0000000000001231       0x28 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_release_fd.o)
                                         0x1e2 (size before relaxing)
- .debug_str     0x0000000000001243       0x4a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
+ .debug_str     0x0000000000001259       0x4a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_tick.o)
                                         0x261 (size before relaxing)
- .debug_str     0x000000000000128d       0x3b ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x00000000000012a3       0x3b ../LCD_DMA_controller_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x16b (size before relaxing)
- .debug_str     0x00000000000012c8       0x24 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
+ .debug_str     0x00000000000012de       0x24 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_dev.o)
                                         0x1fb (size before relaxing)
- .debug_str     0x00000000000012ec       0x26 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
+ .debug_str     0x0000000000001302       0x26 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_find_file.o)
                                         0x209 (size before relaxing)
- .debug_str     0x0000000000001312       0x30 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
+ .debug_str     0x0000000000001328       0x30 ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_get_fd.o)
                                         0x22b (size before relaxing)
- .debug_str     0x0000000000001342       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
+ .debug_str     0x0000000000001358       0x2c ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_icache_flush.o)
                                         0x16a (size before relaxing)
- .debug_str     0x000000000000136e      0x163 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_str     0x0000000000001384      0x163 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
                                         0x208 (size before relaxing)
- .debug_str     0x00000000000014d1      0x3ac /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_str     0x00000000000014e7      0x3ac /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
                                         0x5a5 (size before relaxing)
- .debug_str     0x000000000000187d       0xc9 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_str     0x0000000000001893       0xc9 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
                                         0x59c (size before relaxing)
- .debug_str     0x0000000000001946       0x3c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_str     0x000000000000195c       0x3c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
                                         0x1c4 (size before relaxing)
- .debug_str     0x0000000000001982       0xc6 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_str     0x0000000000001998       0xc6 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
                                         0x1cb (size before relaxing)
- .debug_str     0x0000000000001a48       0x68 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_str     0x0000000000001a5e       0x68 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
                                         0x1f2 (size before relaxing)
- .debug_str     0x0000000000001ab0       0x4e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000001ac6       0x4e /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
                                         0x1de (size before relaxing)
- .debug_str     0x0000000000001afe       0x3c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_str     0x0000000000001b14       0x3c /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
                                         0x5dd (size before relaxing)
- .debug_str     0x0000000000001b3a       0x62 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_str     0x0000000000001b50       0x62 /opt/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
                                         0x5c9 (size before relaxing)
- .debug_str     0x0000000000001b9c       0x2a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
+ .debug_str     0x0000000000001bb2       0x2a ../LCD_DMA_controller_bsp//libhal_bsp.a(alt_exit.o)
                                         0x160 (size before relaxing)
 
 .debug_loc      0x0000000000000000      0x770

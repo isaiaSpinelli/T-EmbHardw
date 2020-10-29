@@ -103,11 +103,11 @@ architecture rtl of lcd_controller_tb is
   signal lcd_d_c_n_s	     : std_logic;
 
   --register definition (from vhdl implementation)
-  constant  LCD_WRITE_CMD_ADDR  : std_logic_vector              := "000";
-  constant  LCD_WRITE_DATA_ADDR : std_logic_vector              := "001";
-  constant  IMG_PTR_REG_ADDR    : std_logic_vector              := "010";
-  constant  IMG_SIZE_REG_ADDR   : std_logic_vector              := "011";
-  constant  CTRL_REG_ADDR       : std_logic_vector              := "100";
+  constant  LCD_WRITE_CMD_ADDR  : std_logic_vector              := "001";
+  constant  LCD_WRITE_DATA_ADDR : std_logic_vector              := "010";
+  constant  IMG_PTR_REG_ADDR    : std_logic_vector              := "100";
+  constant  IMG_SIZE_REG_ADDR   : std_logic_vector              := "101";
+  constant  CTRL_REG_ADDR       : std_logic_vector              := "110";
 
   ---------------------------------------------------------------------------------------
   -- shared signals of the test processes
@@ -122,12 +122,12 @@ begin
   ---------------------------------------------------------------------------------------
   -- component (dut) instantiation
   ---------------------------------------------------------------------------------------
-  lcd_controller_component : entity work.DMA_LCD_ctrl
+  lcd_controller_component : entity work.ParallelPort
   port map(
 
     -- global signals
-    clk                         => clk_s,
-    reset                       => reset_s,
+    Clk                         => clk_s,
+    nReset                       => reset_s,
     
     -- Avalon Master
     master_address              => avm_address_s,
@@ -139,18 +139,18 @@ begin
     end_of_transaction_irq      => end_of_transaction_irq_s, 
     
     -- Avalon Slave
-    avalon_address              => avs_address_s,
-    avalon_cs                   => avs_cs_s,
-    avalon_rd                   => avs_read_s,
-    avalon_read_data            => avs_readdata_s,
-    avalon_wr                   => avs_write_s,
-    avalon_write_data           => avs_writedata_s,
+    Address              => avs_address_s,
+    ChipSelect                   => avs_cs_s,
+    Read                   => avs_read_s,
+    ReadData            => avs_readdata_s,
+    Write                   => avs_write_s,
+    WriteData           => avs_writedata_s,
 
     -- LCD Parallel Bus
     LCD_data                    => lcd_data_s,
-    LCD_CS_n                    => lcd_cs_n_s,
-    LCD_WR_n                    => lcd_wr_n_s,
-    LCD_D_C_n                   => lcd_d_c_n_s
+    LCD_CSn                    => lcd_cs_n_s,
+    LCD_WRn                    => lcd_wr_n_s,
+    LCD_D_Cn                   => lcd_d_c_n_s
 
   );
 
@@ -162,9 +162,9 @@ begin
   begin
 
     -- do reset
-    reset_s <= '1';
-    wait for RESET_DURATION;
     reset_s <= '0';
+    wait for RESET_DURATION;
+    reset_s <= '1';
 
     -- do not restart this process
     wait;
@@ -430,7 +430,7 @@ begin
                           CLK => clk_s,
                           CLK_PERIOD => CLK_PERIOD,
                           CONST_ADDRESS => CTRL_REG_ADDR,
-                          CONST_DATA => x"00_00_00_04"
+                          CONST_DATA => x"00_00_00_02"
     );
 
     -- debug out
