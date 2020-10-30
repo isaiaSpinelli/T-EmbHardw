@@ -17,9 +17,13 @@
 
 // OFFSET LCD interface
 #define CONTROL_OFFSET 0x00
-#define COM_OFFSET 0x02
-#define DATA_OFFSET 0x04
-#define RESET_OFFSET 0x06
+#define COM_OFFSET 0x04
+#define DATA_OFFSET 0x08
+#define RESET_OFFSET 0x0c
+#define PTR_OFFSET 0x10
+#define SIZE_OFFSET 0x14
+#define DMA_CONTROL_OFFSET 0x18
+
 
 // OFFSET Timer interval
 #define STATUS_OFFSET 0x00
@@ -48,7 +52,9 @@ size_t stopTimer(void);
 
 // counter 10ms
 int counter = 0;
+int time_ms;
 
+#define LCD_DMA_INT_0_BASE_test 0x2001060
 
 void timer_interrupt (void* context, alt_u32 id) {
 
@@ -60,26 +66,41 @@ void timer_interrupt (void* context, alt_u32 id) {
 
 }
 
+void dma_interrupt (void* context, alt_u32 id) {
+
+	// Stop timer for measure perf
+	time_ms = stopTimer();
+	// acknowledge IRQ on the timer
+	IOWR_32DIRECT(LCD_DMA_INT_0_BASE, DMA_CONTROL_OFFSET ,0x02);
+
+	return ;
+}
+
 
 int main()
 {
 	char  *data = header_data ;
 	int size_img = X_PIXEL_SIZE * Y_PIXEL_SIZE;
-	int time;
-
+	int ptr, size;
+	// ptr sur l image
 	alt_16 color[size_img+1];
 	alt_16 color_reverse[size_img+1];
 
+
 	// link irq to handler
 	alt_irq_register(TIMER_0_IRQ,(void*)2,(alt_isr_func)timer_interrupt);
+	//alt_irq_register(LCD_DMA_INT_0_IRQ,(void*)2,(alt_isr_func)dma_interrupt);
+	alt_irq_register(0,(void*)2,(alt_isr_func)dma_interrupt);
+
+
 	// start timer and active irq
 	startTimer();
 
-
 	init_LCD();
 	// stop le timer
-	stopTimer();
-
+	time_ms = stopTimer();
+	/*
+	// Test les couleurs principales
 	full_lcd_rgb(0,63,0);
 	full_lcd_rgb(0,0,31);
 	full_lcd_rgb(31,0,0);
@@ -88,7 +109,7 @@ int main()
 	full_lcd_rgb(31,0,31);
 	full_lcd_rgb(0,0,0);
 	full_lcd_rgb(31,63,31);
-
+*/
 	// Get array pixel from image of Gimp
 	imgToArray(color_reverse, data );
 	// Reverse array pixel
@@ -97,12 +118,33 @@ int main()
 
 	// Start timer for measure perf
 	startTimer();
-
 	// Send array pixel on LCD
 	LCD_write_Array(color);
-
 	// Stop timer for measure perf
-	time = stopTimer();
+	time_ms = stopTimer();
+
+	// set white lcd
+	full_lcd_rgb(31,63,31);
+
+
+	LCD_Write_Command(0x002c);
+
+	IOWR_32DIRECT(LCD_DMA_INT_0_BASE, PTR_OFFSET, color);
+	IOWR_32DIRECT(LCD_DMA_INT_0_BASE, SIZE_OFFSET, size_img);
+
+	 ptr = IORD_32DIRECT(LCD_DMA_INT_0_BASE, PTR_OFFSET); // 0x10  100
+	 size = IORD_32DIRECT(LCD_DMA_INT_0_BASE, SIZE_OFFSET); // 0x10  100
+
+
+	 // start timer and active irq
+	startTimer();
+	 // send dma transfert
+	IOWR_32DIRECT(LCD_DMA_INT_0_BASE, DMA_CONTROL_OFFSET ,0x01);
+
+
+	while(1) {
+
+	}
 
 
   return 0;
@@ -136,9 +178,11 @@ void full_lcd_color(alt_16 color){
 void init_LCD() {
 
       IOWR_8DIRECT(LCD_DMA_INT_0_BASE,RESET_OFFSET,0x01); // set reset on and 16 bits mode
-      while (counter<100){}   // include delay of at least 120 ms use your timer or a loop
+      while (counter<150){}   // include delay of at least 120 ms use your timer or a loop
+
       IOWR_8DIRECT(LCD_DMA_INT_0_BASE,RESET_OFFSET,0x00); // set reset off and 16 bits mode and enable LED_CS
-      while (counter<200){}   // include delay of at least 120 ms use your timer or a loop
+      while (counter<300){}   // include delay of at least 120 ms use your timer or a loop
+
 
       LCD_Write_Command(0x0028);     //display OFF
       LCD_Write_Command(0x0011);     //exit SLEEP mode
@@ -284,5 +328,5 @@ size_t stopTimer(void){
 	// stop le timer
 	IOWR_16DIRECT(TIMER_0_BASE, CONTROL_OFFSET_TIMER ,0xB);
 
-	return counter * 10; // environ 70 ms
+	return counter ;
 }

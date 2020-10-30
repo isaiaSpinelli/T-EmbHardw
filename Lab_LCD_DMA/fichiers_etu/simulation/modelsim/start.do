@@ -17,7 +17,7 @@ alias tb_env {
 
 alias design {
   echo "\nCOMPILE DESIGN\n"
-  eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd
+  eval vcom -work work $VHDL_SOURCE_DIR/LCD.vhd
   echo "COMPILE DESIGN DONE!\n"
 }
 
