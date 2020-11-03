@@ -1,6 +1,6 @@
 J ai mesure les temps de traitement avec un timer d une periode de 1 ms.
 
-Affichage de l image sans DMA -> plus de 76 ms
-Affichae de l image avec DMA  -> plus de 27 ms
+Affichage de l image sans DMA -> 76 ms
+Affichae de l image avec DMA  -> 27 ms
 
 76 / 27 = une amelioration de plus de 2.8 
