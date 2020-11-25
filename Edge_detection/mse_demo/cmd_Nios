@@ -1,0 +1,17 @@
+( chmod -R +w .r )
+
+intelFPGA_lite
+
+intelFPGA_lite jtagconfig -n  			// see jtag connected
+
+intelFPGA_lite nios2-configure-sof 		// download .sof in board (in output_files directory) (maybe add & for background)
+
+intelFPGA_lite nios2-download -g sobel.elf	// download app on board 
+intelFPGA_lite nios2-terminal			// Run app
+
+
+
+intelFPGA_lite nios2-bsp-update-settings --settings <PATH/TO/settings.bsp>
+
+intelFPGA_lite nios2-bsp-generate-files --settings <./software/sobel_bsp/settings.bsp> --bsp-dir <./software/sobel_bsp/>
+
