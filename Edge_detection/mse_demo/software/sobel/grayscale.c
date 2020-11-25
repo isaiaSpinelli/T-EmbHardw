@@ -26,6 +26,7 @@ void conv_grayscale(void *picture,
 	for (y = 0 ; y < height ; y++) {
 		for (x = 0 ; x < width ; x++) {
 			rgb = pixels[y*width+x];
+			// IORD_16DIRECT(pixels,y*width+x); // read in main memory
 
 			// Solution de base (0.864)
 			/*
@@ -45,7 +46,8 @@ void conv_grayscale(void *picture,
 			int a = 20; // 0.56 * 16 = 9;	1		20
 
 			gray = (int)((red * c) + (green * b) + (blue*a) ) >> 2;
-			IOWR_8DIRECT(grayscale_array,y*width+x,gray);
+			// IOWR_8DIRECT(grayscale_array,y*width+x,gray);
+			grayscale_array[y*width+x] = gray; // write in cache
 		}
 	}
 }

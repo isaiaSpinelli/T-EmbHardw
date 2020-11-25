@@ -137,6 +137,8 @@ void sobel_complete( unsigned char *source ) {
 	    	  result_x = 0;
 	    	  result_y = 0;
 	    	  // Inlining and unrolling
+
+	    	  // use cache for source
 	    	  result_x += filter_x[0]*source[(y-1)*width+(x-1)];
 	    	  result_x += filter_x[1]*source[(y-1)*width+(x)];
 	    	  result_x += filter_x[2]*source[(y-1)*width+(x+1)];
@@ -160,7 +162,8 @@ void sobel_complete( unsigned char *source ) {
 	    	  // threshold
 				sum = (result_x < 0) ? -result_x : result_x;
 				sum += (result_y < 0) ? -result_y : result_y;
-				sobel_result[y*width+x] = (sum > 128) ? 0xFF : 0;
+				//sobel_result[y*width+x] = (sum > 128) ? 0xFF : 0; // result in main memory
+				IOWR_8DIRECT(sobel_result,y*width+x, (sum > 128) ? 0xFF : 0 ); // result in main memory
 
 	      }
 	   }

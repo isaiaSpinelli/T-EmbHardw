@@ -122,7 +122,7 @@ int main()
 						printf("conv_grayscale : diff = %d / time = %.3f\n",
 					   diff_mesure ,time );
 
-                       grayscale = get_grayscale_picture();
+                       grayscale = get_grayscale_picture(); // grayscale in cache
 /*
                        start_mesure = alt_timestamp();
                        sobel_x(grayscale);
@@ -141,7 +141,7 @@ int main()
                        						   diff_mesure ,time );*/
 
 					   start_mesure = alt_timestamp();
-						 sobel_complete(grayscale);
+						 sobel_complete(grayscale); // result in main memory
 						 end_mesure = alt_timestamp();
 						diff_mesure = end_mesure-start_mesure;
 						time = (float)diff_mesure / freq;
