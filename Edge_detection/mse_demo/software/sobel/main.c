@@ -15,6 +15,10 @@
 
 int main()
 {
+	int i,j;
+	alt_u32 imageSize ;
+	alt_u32 sizeDiv16 ;
+
   alt_u32 start_mesure, end_mesure, diff_mesure, freq;
   float time;
 
@@ -111,6 +115,85 @@ int main()
 		      	  		  vga_set_pointer(image);
 		      	  	   }
 		      	  	   break;
+		      case 4 :
+
+		    	  start_mesure = alt_timestamp();
+
+		    	  conv_grayscale((void *)image,
+								  cam_get_xsize()>>1,
+								  cam_get_ysize());
+		    	  end_mesure = alt_timestamp();
+				diff_mesure = end_mesure-start_mesure;
+				time = (float)diff_mesure / freq;
+				printf("grayscale 4 : diff = %d / time = %.3f\n",
+						diff_mesure ,time );
+
+				grayscale = get_grayscale_picture(); // grayscale in cache
+
+				start_mesure = alt_timestamp();
+
+				//sobel_complete_2(grayscale, 4);
+				sobel_complete_3(grayscale, 16);
+				 //sobel_complete(grayscale); // result in main memory
+
+
+
+
+
+				end_mesure = alt_timestamp();
+				diff_mesure = end_mesure-start_mesure;
+				time = (float)diff_mesure / freq;
+				printf("sobel_complete 4 : diff = %d / time = %.3f\n",
+				   diff_mesure ,time );
+
+
+
+
+				grayscale=GetSobelResult();
+				transfer_LCD_with_dma(&grayscale[16520],
+								cam_get_xsize()>>1,
+								cam_get_ysize(),1);
+
+
+
+				if ((current_mode&DIPSW_SW8_MASK)!=0) {
+				  vga_set_swap(VGA_QuarterScreen|VGA_Grayscale);
+				  vga_set_pointer(grayscale);
+				}
+				   break;
+
+		      case 5 :
+
+				  start_mesure = alt_timestamp();
+
+				  //conv_grayscale((void *)image,
+								 // cam_get_xsize()>>1,
+								 // cam_get_ysize());
+
+				sobel_and_gray_complete((void *)image);
+
+				  end_mesure = alt_timestamp();
+				diff_mesure = end_mesure-start_mesure;
+				time = (float)diff_mesure / freq;
+				printf("all 5: diff = %d / time = %.3f\n",
+						diff_mesure ,time );
+
+				//grayscale = get_grayscale_picture(); // grayscale in cache
+
+
+
+				grayscale=GetSobelResult();
+				transfer_LCD_with_dma(&grayscale[0],
+								cam_get_xsize()>>1,
+								cam_get_ysize(),1);
+
+
+				if ((current_mode&DIPSW_SW8_MASK)!=0) {
+				  vga_set_swap(VGA_QuarterScreen|VGA_Grayscale);
+				  vga_set_pointer(grayscale);
+				}
+				   break;
+
 		      default: start_mesure = alt_timestamp();
 
 					  conv_grayscale((void *)image,
